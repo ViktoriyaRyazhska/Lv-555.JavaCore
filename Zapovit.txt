@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 1. Our soul does not die, the will does not die
 2. Mene na mogyli
@@ -9,10 +9,19 @@
 2. Mene na mogyli
 4. in cute Ukraine 
 5. Щоб лани широкополі,
+
+2. Mene na mogyli
+4. in cute Ukraine 444
+2. Mene na mogyli
+4. in cute Ukraine 
+5. Щоб лани широкополі,
+12. I lany i gory - 
+
 6. I Dnpro, i cruchi
 3. Sered stepy shyrokogo
 4. in cute Ukraine 
 5. Щоб лани широкополі,
+
 
 10. Try to commit
 
@@ -23,6 +32,13 @@
 10. Try something
 
 
-=======
+
 9. Як понесе з України
->>>>>>> 7a970274a05578f75a74e1043301f84a4d2a6968
+
+
+10. Try to commit
+10. Try something
+8. Jak reve revychiy.
+10. Try something
+9. Як понесе з України
+
