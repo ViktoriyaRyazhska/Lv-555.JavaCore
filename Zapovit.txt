@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 1. Our soul does not die, the will does not die
 2. Mene na mogyli
@@ -22,3 +23,6 @@
 10. Try something
 
 
+=======
+9. Як понесе з України
+>>>>>>> 7a970274a05578f75a74e1043301f84a4d2a6968
