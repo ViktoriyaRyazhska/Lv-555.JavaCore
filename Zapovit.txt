@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2. Mene na mogyli
 
 
@@ -7,3 +8,12 @@
 
 
 9. Як понесе з України
+=======
+
+2. Mene na mogyli
+3. Sered stepy shyrokogo
+4. in cute Ukraine 
+5. Щоб лани широкополі,
+
+10. Try to commit
+>>>>>>> f80299f47fb2a36c7dfb4bb684fd99f07718ba68
