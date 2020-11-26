@@ -1,23 +1,24 @@
-<<<<<<< HEAD
+
 1. Our soul does not die, the will does not die
 2. Mene na mogyli
 4. in cute Ukraine 
 
 
 
-=======
->>>>>>> e45c8d1936d15710e9991f1579f4420ee0dbd76f
 2. Mene na mogyli
 4. in cute Ukraine 
 5. Щоб лани широкополі,
-8. Jak reve revychiy.
+6. I Dnpro, i cruchi
 3. Sered stepy shyrokogo
 4. in cute Ukraine 
 5. Щоб лани широкополі,
-<<<<<<< HEAD
 
 10. Try to commit
 
-=======
+
+
 10. Try something
->>>>>>> e45c8d1936d15710e9991f1579f4420ee0dbd76f
+8. Jak reve revychiy.
+10. Try something
+
+
