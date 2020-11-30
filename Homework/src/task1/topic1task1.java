@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class topic1task1 {
     public static void main(String[] args) throws IOException {
 
-        //task 1
+        //task 1    some changes
         System.out.println("Enter a radius value:");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int radius = Integer.parseInt(reader.readLine());
