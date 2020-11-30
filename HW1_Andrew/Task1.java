@@ -11,7 +11,7 @@ public class Task1 {
         double radius = Double.parseDouble(br.readLine());;
         double perimeter;
         double area;
-        while (radius <= 0){ //radius cannot be less than 0
+        while (radius <= 0){ //radius cannot be less than 0 or equal to 0
                 System.out.println("Радіус не може бути менше 0. Введіть число більше 0: ");
                 radius = Double.parseDouble(br.readLine());
         }
