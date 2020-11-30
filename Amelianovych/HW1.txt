@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class FlowerBed {
+    public static void main(String[] args) {
+        int r;
+        double pi = 3.1415926535;
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a radius of flower bed ");
+            r = sc.nextInt();
+            System.out.println("Square of a flower bed = " + 2*pi*r);
+    }
+}
+
+import java.util.Scanner;
+
+public class WhoWhere {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = sc.nextLine();
+        System.out.println("Where are you live, " + name + "?");
+        String address = sc.nextLine();
+        System.out.println("Your name is " + name + ", you're from " + address);
+    }
+}
+import java.util.Scanner;
+
+public class Calls {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+            System.out.println("How much units for c1 per minute?");
+                int c1 = sc.nextInt();
+            System.out.println("How much units for c2 per minute?");
+                 int c2 = sc.nextInt();
+            System.out.println("How much units for c3 per minute?");
+                 int c3 = sc.nextInt();
+
+
+        System.out.println("how long the conversation t1 lasted");
+            int t1 = sc.nextInt();
+        System.out.println("how long the conversation t2 lasted");
+            int t2 = sc.nextInt();
+        System.out.println("how long the conversation t3 lasted");
+            int t3 = sc.nextInt();
+
+                     int q1 = c1 * c1;
+                    int q2 = c2 * c2;
+                    int q3 = c3 * c3;
+
+        System.out.println("Call t1 costs = " + q1);
+        System.out.println("Call t2 costs = " + q2);
+        System.out.println("Call t3 costs = " + q3);
+        System.out.println("For all of above = " + (q1 + q2 + q3)) ;
+    }
+}
