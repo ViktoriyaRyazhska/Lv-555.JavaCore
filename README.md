@@ -1,23 +1,13 @@
 # Lv-555.JavaCore
 
-                  HW1
-                  
-AndriyPasternak
-
-yanko-av          +
-
-Roman202 
-
-Bohdan Melnyk     +
-
-DTomSawyer        +
-
-NickolayGryzov    
-
-beemaya13         +
-
-OlegStashkiv      +
-
-AndrewKbrn        +
-
-TarasAmelianovych +
+ |N|Name| HW1|                 
+|1|AndriyPasternak | |
+|2|yanko-av| +|
+|3|Roman202| | 
+|4|Bohdan Melnyk |+|
+|5|DTomSawyer|+|
+|6|NickolayGryzov| |    
+|7|beemaya13|+|
+|8|OlegStashkiv|+|
+|9|AndrewKbrn|+|
+|10|TarasAmelianovych|+|
