@@ -10,7 +10,7 @@ public class CompanySalary {
         System.out.println(Employee.totalSum());
     }
 }
-public class Employee {
+class Employee {
     private String name;
     private int rate;
     private int hours;
