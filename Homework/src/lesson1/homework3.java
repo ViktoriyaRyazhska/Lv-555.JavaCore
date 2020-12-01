@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class topic1task1 {
+public class homework3 {
     public static void main(String[] args) throws IOException {
 
         //task 1
