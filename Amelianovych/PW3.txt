@@ -1,0 +1,85 @@
+public class CompanySalary {
+    public static void main(String[] args) {
+        Employee s = new Employee();
+        s.setHours(2);
+        s.setName("Andy");
+        s.setRate(3);
+        Employee s1 = new Employee("Nancy", 2);
+        s1.setRate(2);
+        Employee s2 = new Employee("Katy", 1, 5);
+        System.out.println(Employee.totalSum());
+    }
+}
+public class Employee {
+    private String name;
+    private int rate;
+    private int hours;
+    private static double totalSum = 0;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRate() {
+        return rate;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRate(int rate) {
+        totalSum -= getSalary();
+        this.rate = rate;
+        totalSum += getSalary();
+    }
+
+    public void setHours(int hours) {
+        totalSum -= getSalary();
+        this.hours = hours;
+        totalSum += getSalary();
+    }
+    public Employee(){totalSum += getSalary();}
+
+    public Employee(String name, int rate){
+        this.name = name;
+        this.rate = rate;
+        totalSum += getSalary();
+    }
+
+    public Employee(String name, int rate, int hours){
+        this.name = name;
+        this.rate = rate;
+        this.hours = hours;
+        totalSum += getSalary();
+    }
+    public double getSalary(){
+    return this.rate * this.hours;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", rate=" + rate +
+                ", hours=" + hours +
+                '}';
+    }
+    public int changeRate (int rate){
+        totalSum -= getSalary();
+        this.rate = rate;
+        totalSum += getSalary();
+        return rate;
+    }
+    public static double totalSum(){
+    return totalSum;
+    }
+
+    public double getBonuses(){
+        return getSalary() * 0.1;
+    }
+}
