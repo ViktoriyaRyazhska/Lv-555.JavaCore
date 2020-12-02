@@ -8,7 +8,7 @@ public class Smain {
         Person pers1 = new Person("Tom","Sawyer");
         Person pers2 = new Person("Chuck","Norris");
         System.out.println(pers.getAge());
-        pers.input("Blue","Berry",1979);
+        pers.input();
         System.out.println(pers.getAge());
         pers.output();
         pers.changeName("Bl","Ber");
@@ -33,7 +33,7 @@ class Person{
         this.lastName = "Unknown";
         this.birthYear = 1990;
     }
-    public void input(String firstName, String lastName, int birthYear) {
+    public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type your first name here: ");
         firstName = scanner.nextLine();
