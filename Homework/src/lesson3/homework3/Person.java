@@ -1,6 +1,10 @@
 package lesson3.homework3;
 
-import java.util.Calendar;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.time.LocalDate;
+
 
 public class Person {
     private String firstName;
@@ -11,24 +15,27 @@ public class Person {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public Person setFirstName(String firstName) {
         this.firstName = firstName;
+        return this;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public Person setLastName(String lastName) {
         this.lastName = lastName;
+        return this;
     }
 
     public int getBirthYear() {
         return birthYear;
     }
 
-    public void setBirthYear(int birthYear) {
+    public Person setBirthYear(int birthYear) {
         this.birthYear = birthYear;
+        return this;
     }
 
     public Person(String firstName, String lastName) {
@@ -39,14 +46,37 @@ public class Person {
     public Person() {}
 
     public int getAge(){
-        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-        return currentYear - this.birthYear;
+
+//        return Calendar.getInstance().get(Calendar.YEAR) - birthYear;
+
+        return LocalDate.now().getYear() - birthYear;
     }
 
-    public void input(){
-        System.out.println("Enter  first name: >");
-        System.out.println("Enter  last name: >");
-        System.out.println("Enter  year of birth: >");
+    public void input() {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Enter first name [now: " + (null == firstName || firstName.isEmpty() ? "not set" : firstName) + "]:> ");
+        try {
+            firstName = reader.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.print("Enter last name [now: " + (null == lastName || lastName.isEmpty() ? "not set" : lastName) + "]:> ");
+        try {
+            lastName = reader.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.print(("Enter year of birth [now: " + (0 == birthYear ? "not set" : birthYear) + "]:> "));
+        try {
+            birthYear = Integer.parseInt(reader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e){
+            e.printStackTrace();
+        }
     }
 
     public void changeName(String newName, String newSurname){
@@ -71,4 +101,9 @@ public class Person {
                 ", age=" + getAge() +
                 '}';
     }
+
+
 }
+
+
+
