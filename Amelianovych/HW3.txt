@@ -1,0 +1,75 @@
+import java.util.Calendar;
+import java.util.Date;
+
+public class Person {
+    public static void main(String[] args) {
+        Person1 person1 = new Person1();
+        Person1 p1 = new Person1();
+        Person1 p2 = new Person1("Nancy", "Small");
+        p2.changeName("Andy", "Kersy");
+        p1.input("Kevin", "Topmsl", 1995);
+        p2.output();
+        System.out.println(p1.getAge());
+    }
+}
+
+class Person1 {
+    private String name;
+    private String lastName;
+    private int dateBirth;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public int getDateBirth() {
+        return dateBirth;
+    }
+    public void setDateBirth(int dateBirth) {
+        this.dateBirth = dateBirth;
+    }
+
+    public Person1 (String name, String lastName){
+        this.name = name;
+        this.lastName = lastName;
+    }
+
+    public Person1 (){}
+
+    public int getAge (){
+        Date today = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(today);
+        int year = cal.get(Calendar.YEAR);
+        return year - getDateBirth();
+    }
+    public void input (String name, String lastName, int dateBirth) {
+        this.name = name;
+        this.lastName = lastName;
+        this.dateBirth = dateBirth;
+    }
+    public void output (){
+        System.out.println("Name: " + getName() + ", Last Name: " + getLastName() + ", Date of Birth: " + getDateBirth());
+    }
+    public void changeName (String fn, String ln){
+        this.name = fn;
+        this.lastName = ln;
+    }
+
+    @Override
+    public String toString() {
+        return "Person1{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dateBirth=" + dateBirth +
+                '}';
+    }
+}
