@@ -1,6 +1,7 @@
 package firstPac;
 
 import java.util.Scanner;
+import java.time.LocalDate;
 
 public class HW03Person {
 	
@@ -21,12 +22,20 @@ public class HW03Person {
 	public void setBirthYear(int birthYear) {this.birthYear = birthYear;}
 	
 	//Constructors
-	public HW03Person() {}
-	public HW03Person(String firstName, String lastName) {}
+	public HW03Person() {
+		this.firstName = "Unknown person";
+        this.lastName = "Unknown person";
+        this.birthYear = LocalDate.now().getYear();
+	}
+	public HW03Person(String firstName, String lastName) {
+		this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthYear = LocalDate.now().getYear();
+	}
 	
 	//GETAGE
 			int getAge(int birthYear) {
-				int age = 2020 - birthYear;
+				int age = LocalDate.now().getYear() - birthYear;
 				return age;
 			}
 			
@@ -48,8 +57,8 @@ public class HW03Person {
 			
 	//CHANGENAME	(?????????????)	
 			void changeName(String fn, String ln) {
-				firstName = fn;
-				lastName = ln;
+				this.firstName = fn;
+				this.lastName = ln;
 			}
 
 			public static void main(String[] args) {
