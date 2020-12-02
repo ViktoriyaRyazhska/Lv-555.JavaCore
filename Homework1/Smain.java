@@ -1,4 +1,6 @@
+import java.sql.SQLOutput;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Smain {
     public static void main(String[] args) {
@@ -22,8 +24,6 @@ class Person{
     private int birthYear;
     private final static int CURRENT_YEAR = LocalDate.now().getYear();
 
-
-
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,11 +32,17 @@ class Person{
         this.firstName = "Unknown";
         this.lastName = "Unknown";
         this.birthYear = 1990;
-
     }
     public void input(String firstName, String lastName, int birthYear) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type your first name here: ");
+        firstName = scanner.nextLine();
         this.firstName = firstName;
+        System.out.println("Type your last name here: ");
+        lastName = scanner.nextLine();
         this.lastName = lastName;
+        System.out.println("Type your birth date here: ");
+        birthYear = scanner.nextInt();
         this.birthYear = birthYear;
     }
         public void changeName(String fn,String ln){
