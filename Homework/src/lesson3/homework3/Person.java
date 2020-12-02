@@ -44,14 +44,18 @@ public class Person {
     }
 
     public void input(){
-        System.out.println("Enter your first name:");
-        System.out.println("Enter your last name:");
-        System.out.println("Enter your year of birth:");
+        System.out.println("Enter  first name: >");
+        System.out.println("Enter  last name: >");
+        System.out.println("Enter  year of birth: >");
     }
 
     public void changeName(String newName, String newSurname){
-        this.firstName = newName;
-        this.lastName = newSurname;
+        if(newName != null && !newName.isEmpty()) {
+            setFirstName(newName);
+        }
+        if(newSurname != null && !newSurname.isEmpty()) {
+            setLastName(newSurname);
+        }
     }
 
     public void output(){

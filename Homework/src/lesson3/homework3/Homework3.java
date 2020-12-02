@@ -17,7 +17,8 @@ public class Homework3 {
         p5.setFirstName("Maksim");
         p5.setLastName("Maksimov");
 
-        p3.changeName(p3.getFirstName(),"Korolyov");
+        p3.changeName("", "Korolyov");
+        p4.changeName("Vasya", null);
 
         p1.output();
         p2.output();
