@@ -1,0 +1,77 @@
+package com.company;
+
+import java.util.Calendar;
+import java.lang.String;
+
+public class Main {
+
+    private String firstName;
+    private String lastName;
+    private static int Age;
+    private int Birthday;
+    private int NowTime;
+
+    public String getfirstName() {
+        return firstName;
+    }
+    public void setfirstName(String name) {
+        this.firstName = firstName;
+    }
+
+    public String getlastName() {
+        return lastName;
+    }
+    public void setlastName(String name) {
+        this.lastName = lastName;
+    }
+    public void setBirthday(int birthday) {
+        Age = Age + selery();
+        this.Birthday = Birthday;
+    }
+    public void NowTime(int NowTime) {
+        Age = Age + selery();
+        this.NowTime = NowTime;
+    }
+    public static int getAge() {
+        return Age;
+    }
+
+    public Main(String firstName, int Birthday, int NowTime, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.Birthday = Birthday;
+        this.NowTime = NowTime;
+        Age = Age + selery();
+    }
+
+    @Override
+    public String toString() {
+        return "Main (firstName =" + firstName +", lastName = " + lastName + " Birthday year = " + Birthday + " NowTime = " + NowTime +")";
+    }
+
+    public int selery() {
+        return  NowTime - Birthday;
+    }
+}
+class demoMain {
+    private String firstName;
+    private String lastName;
+
+    public static void main(String[] args) {
+        Main a1 = new Main("Roman", 1994, 2020, "Hera");
+
+
+
+        System.out.println(a1);
+
+
+        System.out.println("Age = " + Main.getAge());
+
+    }
+    public void changeName(String fn, String ln){
+        this.firstName = (fn != null) ? fn : this.firstName;
+        this.lastName = (ln != null) ? fn : this.lastName;
+    }
+
+
+}
