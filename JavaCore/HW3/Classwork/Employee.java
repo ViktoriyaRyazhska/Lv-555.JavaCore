@@ -45,9 +45,7 @@ public class Employee {
     }
 
     public int getSalary() {
-            salary = hours * this.rate;
-
-        return salary;
+        return hours * this.rate;
     }
     public int changeRate(){
         System.out.print("Write new rate for " + name + ":");
@@ -57,12 +55,10 @@ public class Employee {
     }
 
     public double getBonuses() {
-        bonuses = getSalary() * 0.1;
-        return bonuses;
+        return getSalary() * 0.1;
     }
     public double getTotalSum() {
-        totalSum = salary + bonuses;
-        return totalSum;
+        return salary + bonuses;
     }
 
     @Override
