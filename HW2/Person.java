@@ -1,4 +1,4 @@
-import java.util.Calendar;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Person {
@@ -29,7 +29,7 @@ public class Person {
 	public Person() {
 	}
 	public int getAge() {
-		int age = Calendar.getInstance().get(Calendar.YEAR) - birthYear;
+		int age = LocalDate.now().getYear() - birthYear;
 		return age;
 	}
 	public static Person input(Scanner sc){
