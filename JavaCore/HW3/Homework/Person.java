@@ -1,12 +1,10 @@
 import java.util.Scanner;
-
+import java.time.LocalDate;
 
 public class Person {
     private String firstName;
     private String lastName;
     private int birthYear;
-    private int age = 0;
-    Scanner sc = new Scanner(System.in);
     public String getFirstName() {
         return firstName;
     }
@@ -37,10 +35,8 @@ public class Person {
             this.lastName = newLastName;
 
     }
-    public int getAge(int birthYear) {
-        this.birthYear = birthYear;
-        age = 2020 - this.birthYear;
-        return age;
+    public int getAge() {
+        return LocalDate.now().getYear() - this.birthYear;
     }
     public Person(){}
     public Person(String firstName, String lastName){
@@ -48,10 +44,13 @@ public class Person {
         this.lastName = lastName;
     }
     public void input(){
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter  first name: ");
         this.firstName = sc.nextLine();
         System.out.println("Enter  last name: ");
         this.lastName = sc.nextLine();
+        System.out.println("Enter   birth year: ");
+        this.birthYear = sc.nextInt();
     }
     public void output (){
         System.out.println(this.toString());
@@ -62,7 +61,7 @@ public class Person {
         return "firstName: " + firstName  +
                 ", lastName: " + lastName  +
                 ", birthYear: " + birthYear +
-                ", age: " + age +
+                ", age: " + getAge() +
                 '}';
     }
 }
