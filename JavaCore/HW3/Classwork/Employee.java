@@ -4,10 +4,6 @@ public class Employee {
     private String name = "Andrew";
     private int rate;
     private int hours;
-    private int salary;
-    private double bonuses;
-    private static double totalSum;
-
     public String getName() {
         return name;
     }
@@ -58,16 +54,16 @@ public class Employee {
         return getSalary() * 0.1;
     }
     public double getTotalSum() {
-        return salary + bonuses;
+        return getSalary() + getBonuses();
     }
 
     @Override
     public String toString() {
-        return "Employee " + name + " has salary " + salary + "."
-                + " Bonuses: " + bonuses
+        return "Employee " + name + " has salary " + getSalary() + "."
+                + " Bonuses: " + getBonuses()
                 + " Hours: " + hours
                 + " Rate: " + rate
-                + " Total: " + totalSum;
+                + " Total: " + getTotalSum();
     }
 }
 
