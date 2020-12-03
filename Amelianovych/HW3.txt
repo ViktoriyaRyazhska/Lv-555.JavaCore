@@ -52,8 +52,15 @@ class Person1 {
         return year - getDateBirth();
     }
     public void input (String name, String lastName, int dateBirth) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        name = sc.nextLine();
         this.name = name;
+        System.out.println("Enter your last name: ");
+        lastName = sc.nextLine();
         this.lastName = lastName;
+        System.out.println("Enter your date of birthday: ");
+        dateBirth = sc.nextInt();
         this.dateBirth = dateBirth;
     }
     public void output (){
