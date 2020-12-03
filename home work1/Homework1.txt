@@ -1,0 +1,20 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+
+	System.out.println("Введіть радіус ");
+
+	double R = input.nextDouble();
+	double pi = 3.1415;
+	double P = 2 * pi * R;
+	double S = R * R * pi;
+
+	System.out.println("Периметр рівний = " + P);
+	System.out.println("Площа рівна = " + S);
+    }
+}
