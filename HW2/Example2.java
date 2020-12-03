@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Example2 {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		Person p1 = new Person("Vasya","Pupkin");
 		p1.setBirthYear(1988);
 		p1.changeName("sanya", "Rodshild");
@@ -16,5 +19,7 @@ public class Example2 {
 		p5.setFirstName("Rahim");
 		p5.setLastName("Zimba");
 		p5.setBirthYear(2000);
+		Person.input(sc);
+		sc.close();
 	}
 }

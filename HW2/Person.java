@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.util.Scanner;
 
 public class Person {
 	private String firstName, lastName;
@@ -31,7 +32,13 @@ public class Person {
 		int age = Calendar.getInstance().get(Calendar.YEAR) - birthYear;
 		return age;
 	}
-	//public input(){} Что это такое?
+	public static Person input(Scanner sc){
+		System.out.println("Enter Name:");
+		String name = sc.next();
+		System.out.println("Enter FamalyName:");
+		String famalyName = sc.next();
+		return new Person(name, famalyName);
+	}
 	public void output(){
 		System.out.println("Name = " + firstName + "; LastName = " + lastName + "; Age = " + this.getAge());
 	}
