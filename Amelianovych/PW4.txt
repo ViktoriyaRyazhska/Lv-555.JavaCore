@@ -1,0 +1,163 @@
+/*1st TASK
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int odd = 0;
+        System.out.println("Please enter 1st number");
+        int a = sc.nextInt();
+        System.out.println("Please enter 2nd number");
+        int b = sc.nextInt();
+        System.out.println("Please enter 3rd number");
+        int c = sc.nextInt();
+
+        if(a%2 == 1){
+            System.out.println(a);
+            odd++;
+        }
+        if(b%2 == 1){
+            System.out.println(b);
+            odd++;
+        }
+        if(c%2 == 1){
+            System.out.println(c);
+            odd++;
+        }
+        System.out.println("The total number of odd" + odd);
+    }
+*/
+/*2nd TASK
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of the day of the week");
+        int numberOfDay = sc.nextByte();
+        switch (numberOfDay){
+            case 1:
+                System.out.println("Monday, Понеділок");
+                break;
+            case 2:
+                System.out.println("Tuesday, Вівторок");
+                break;
+            case 3:
+                System.out.println("Wednesday, Середа");
+                break;
+            case 4:
+                System.out.println("Thursday, Четверг");
+                break;
+            case 5:
+                System.out.println("Friday, П'ятниця");
+                break;
+            case 6:
+                System.out.println("Saturday, Субота");
+                break;
+            case 7:
+                System.out.println("Sunday, Неділя");
+                break;
+            default:
+                System.out.println("Ви ввели неправильне число");
+            }
+        }
+*/
+/* 3rd TASK
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter name of the country");
+        String county = sc.nextLine();
+        switch (county.toLowerCase()){
+            case "ukraine": case "france":
+                System.out.println(Continents.EUROPE); break;
+        case "india": case "china":
+                System.out.println(Continents.ASIA); break;
+            case "usa": case "canada":
+                System.out.println(Continents.NORTH_AMERICA); break;
+            case "brasil": case "argentina":
+                System.out.println(Continents.SOUTH_AMERICA); break;
+            case "egipt": case "algir":
+                System.out.println(Continents.AFRICA); break;
+            case "australia": case "new zealand":
+                System.out.println(Continents.AUSTRALIA_AND_OCEANIA); break;
+            case "no countries":
+                System.out.println(Continents.ANTARCTIDA); break;
+            default:
+                System.out.println("Youre entered incorrect value"); break;
+        }
+    }
+
+public enum Continents {
+    ASIA, AFRICA, EUROPE, NORTH_AMERICA,SOUTH_AMERICA, AUSTRALIA_AND_OCEANIA, ANTARCTIDA;
+}
+*/
+/*4th task
+
+public class Example {
+    public static void main(String[] args) {
+        int max;
+        Product p1 = new Product("apple", 7, 2);
+        Product p2 = new Product("cherry", 2, 6);
+        Product p3 = new Product("tomato", 7, 10);
+        Product p4 = new Product("potato", 1, 1);
+      max = Math.max(p1.getPrice(), p2.getPrice());
+      if (max < p3.getPrice())
+          max = p3.getPrice();
+      if (max < p4.getPrice())
+          max = p4.getPrice();
+        if (max == p1.getPrice()) System.out.println("The most expensive item= "+ p1.getName()+ " " + p1.getQuantity());
+        if (max == p2.getPrice()) System.out.println("The most expensive item= "+ p2.getName()+ " " + p2.getQuantity());
+        if (max == p3.getPrice()) System.out.println("The most expensive item= "+ p3.getName()+ " " + p3.getQuantity());
+        if (max == p4.getPrice()) System.out.println("The most expensive item= "+ p4.getName()+ " " + p4.getQuantity());
+
+        max = Math.max(p1.getQuantity(), p2.getQuantity());
+        if (max < p3.getQuantity())
+            max = p3.getQuantity();
+        if (max < p4.getQuantity())
+            max = p4.getQuantity();
+        if (max == p1.getQuantity()) System.out.println("Name of product which has the biggest quantity= " + p1.getName());
+        if (max == p2.getQuantity()) System.out.println("Name of product which has the biggest quantity= " + p2.getName());
+        if (max == p3.getQuantity()) System.out.println("Name of product which has the biggest quantity= " + p3.getName());
+        if (max == p4.getQuantity()) System.out.println("Name of product which has the biggest quantity= " + p4.getName());
+    }
+}
+public class Product {
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
+
+    private String name;
+    private int price;
+    private int quantity;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getPrice() {
+        return price;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public int getQuantity() {
+        return quantity;
+    }
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Product (String name, int price, int quantity){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+}
+
+
+
+
+
