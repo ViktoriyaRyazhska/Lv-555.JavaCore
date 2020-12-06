@@ -8,8 +8,8 @@ N|Name| HW1 | HW2
 4|Bohdan Melnyk |+|+|+
 5|DTomSawyer|+|+|+
 6|NickolayGryzov|+|+ |+
-7|beemaya13|+ | +
-8|OlegStashkiv|+ |.
-9|AndrewKbrn|+|+|.
-10|TarasAmelianovych|+|+
+7|beemaya13|+ | +|
+8|OlegStashkiv|+ |.|
+9|AndrewKbrn|+|+|.|
+10|TarasAmelianovych|+|+|
 11|Amelianovych|+|+|+
