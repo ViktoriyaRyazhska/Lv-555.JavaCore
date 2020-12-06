@@ -1,6 +1,6 @@
 # Lv-555.JavaCore
 
-N|Name| HW1 | HW2
+N|Name| HW1 | HW2|HW3
 --|--|--|--|--
 1|AndriyPasternak |+ || 
 2|yanko-av| + | +|.
