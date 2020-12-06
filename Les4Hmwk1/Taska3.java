@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Taska3 {
+        public static void main(String[] args) {
+            float[] arr = new float[3];
+            int i = 0;
+            int counter = 0;
+            Scanner scanner = new Scanner(System.in);
+            for (i = 0; i < arr.length; i++) {
+                System.out.println("Type float: ");
+                arr[i] = scanner.nextFloat();
+                if (arr[i] > -5 && arr[i] < 5) {
+                    counter++;
+                }
+            }
+            if (counter == 3) {
+                System.out.println("All of your numbers are belong to range [-5,5]");
+            }
+            else{
+                    System.out.println("Only " + counter + " Number(s) belongs to range [-5,5]");
+                }
+            }
+        }
