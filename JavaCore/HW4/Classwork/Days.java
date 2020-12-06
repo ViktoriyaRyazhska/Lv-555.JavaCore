@@ -17,6 +17,7 @@ public class Days {
             this.ua = ua;
             this.ru = ru;
         }
+
         public String getDay(){
             return "EN: " + en + " UA: " + ua + " RU: " + ru;
         }

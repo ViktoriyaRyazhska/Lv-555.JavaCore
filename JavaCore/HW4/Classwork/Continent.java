@@ -7,6 +7,6 @@ public class Continent {
         Australia,
         NorthAmerica,
         SouthAmerica,
-        Antarctica;
+        Antarctica
     }
 }

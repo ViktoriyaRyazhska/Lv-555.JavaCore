@@ -5,7 +5,31 @@ import java.io.InputStreamReader;
 public class Classwork {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Enter day or country:");
+
+        Product product1 = new Product("Smartphone", 3000, 1500);
+        Product product2 = new Product("Headphones", 500, 3000);
+        Product product3 = new Product("Laptop", 2010, 100);
+        Product product4 = new Product("Keyboard", 200, 5000);
+        if((product1.getPrice() > product2.getPrice()) && (product1.getPrice() > product3.getPrice()) && (product1.getPrice() > product4.getPrice())){
+            System.out.println(product1.getName() + " " + product1.getQuantity() + " is the most expensive");
+        }else if((product2.getPrice() > product3.getPrice()) && (product2.getPrice() > product4.getPrice())){
+            System.out.println(product2.getName() + " " + product2.getQuantity() + " is the most expensive");
+        }else if(product3.getPrice() > product4.getPrice()){
+            System.out.println(product3.getName() + " " + product3.getQuantity() + " is the most expensive");
+        }else{
+            System.out.println(product4.getName() + " " + product4.getQuantity() + " is the most expensive");
+        }
+
+        if((product1.getQuantity() > product2.getQuantity()) && (product1.getQuantity() > product3.getQuantity()) && (product1.getQuantity() > product4.getQuantity())){
+            System.out.println(product1.getName() +  " has the biggest quantity");
+        }else if((product2.getQuantity() > product3.getQuantity()) && (product2.getQuantity() > product4.getQuantity())){
+            System.out.println(product2.getName() + " has the biggest quantity");
+        }else if(product3.getQuantity() > product4.getQuantity()){
+            System.out.println(product3.getName() + " has the biggest quantity");
+        }else{
+            System.out.println(product4.getName() + " has the biggest quantity");
+        }
+        System.out.print("Select option: day or country: ");
         String input = br.readLine();
         switch (input.toLowerCase()) {
             case "day":
