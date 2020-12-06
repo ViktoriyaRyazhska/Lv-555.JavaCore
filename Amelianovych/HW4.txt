@@ -1,0 +1,167 @@
+/* TASK 1
+  public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a number to check if that belongs to the range [-5;5]");
+        float f = sc.nextFloat();
+        if (-5 <= f && f <= 5) System.out.println(f + " belongs to this range");
+        else System.out.println(f + " is not belongs to this range");
+
+        System.out.println("Please enter 1st number");
+        int i = sc.nextInt();
+        System.out.println("Please enter 2nd number");
+        int o = sc.nextInt();
+        System.out.println("Please enter 3nd number");
+        int p = sc.nextInt();
+        System.out.println("Max= " + Math.max(Math.max(p,o), Math.max(i, o)));
+        System.out.println("Min= " + Math.min(Math.min(o,p), Math.min(i,o)));
+
+        System.out.println("Please enter a HTTP error:");
+        switch (sc.nextInt()){
+            case 400:
+                System.out.println(HttpStatus.Bad_Request); break;
+            case 401:
+                System.out.println(HttpStatus.Unauthorized); break;
+            case 402:
+                System.out.println(HttpStatus.Payment_Required); break;
+            case 403:
+                System.out.println(HttpStatus.Forbidden); break;
+            case 404:
+                System.out.println(HttpStatus.Not_Found); break;
+            case 405:
+                System.out.println(HttpStatus.Method_Not_Allowed); break;
+            case 406:
+                System.out.println(HttpStatus.Not_Acceptable); break;
+            case 407:
+                System.out.println(HttpStatus.Proxy_Authentication_Required); break;
+            case 409:
+                System.out.println(HttpStatus.Conflict); break;
+            case 410:
+                System.out.println(HttpStatus.Gone); break;
+            case 411:
+                System.out.println(HttpStatus.Length_Required); break;
+            case 412:
+                System.out.println(HttpStatus.Precondition_Failed); break;
+            case 413:
+                System.out.println(HttpStatus.Request_Entity_Too_Large); break;
+            case 414:
+                System.out.println(HttpStatus.Request_URI_Too_Long); break;
+            case 415:
+                System.out.println(HttpStatus.Unsupported_Media_Type); break;
+            case 416:
+                System.out.println(HttpStatus.REQUESTED_RANGE_NOT_SATISFIABLE); break;
+            case 417:
+                System.out.println(HttpStatus.Expectation_Failed); break;
+            default:
+                System.out.println("You're entered incorrect value");
+        }
+    }
+*/
+
+2nd TASK
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Dogs {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Dog dog1 = new Dog();
+        Dog dog2 = new Dog();
+        Dog dog3 = new Dog();
+        dog1.input(br);
+        dog3.input(br);
+
+ if (dog1.equals(dog2) || dog2.equals(dog3) || dog3.equals(dog1)) {
+    System.out.println("There are dogs with same name");
+}
+ int max = Math.max(dog1.getAge(), dog2.getAge());
+ if (max < dog3.getAge()){
+    max = dog3.getAge();
+ }
+ if(max == dog1.getAge()) System.out.println("The oldest dog is: "+ dog1.getName() + dog1.getBreed());
+        if(max == dog2.getAge()) System.out.println("The oldest dog is: "+ dog2.getName() + dog2.getBreed());
+        if(max == dog3.getAge()) System.out.println("The oldest dog is: "+ dog3.getName() + dog3.getBreed());
+}
+}
+
+public class Dog {
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dog dog = (Dog) o;
+        return Objects.equals(name, dog.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    private String name;
+        private String breed;
+        private int age;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getBreed() {
+            return breed;
+        }
+
+        public void setBreed(String breed) {
+            this.breed = breed;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", breed='" + breed + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+        public Dog (){
+        }
+        public Dog input (BufferedReader br) throws IOException {
+            System.out.println("Please enter the breed of this dog:(Retriever, Bulldog, Poodle, Rottweiler, Boxer, Chihuahua, Dalmatian, German_Shepherd)");
+            breed = br.readLine();
+            switch (breed){
+                case "Retriever": breed = Breed.Retriever.toString(); break;
+                case "Bulldog": breed = Breed.Bulldog.toString(); break;
+                case "Poodle": breed = Breed.Poodle.toString(); break;
+                case "Rottweiler": breed = Breed.Rottweiler.toString(); break;
+                case "Boxer": breed = Breed.Boxer.toString(); break;
+                case "Chihuahua": breed = Breed.Chihuahua.toString(); break;
+                case "Dalmatian": breed = Breed.Dalmatian.toString(); break;
+                case "German_Shepherd": breed = Breed.German_Shepherd.toString(); break;
+                default:
+                    System.out.println("You're entered incorrect value"); System.exit(0);
+            }
+            System.out.println("Please enter the age of this dog");
+            age = Integer.parseInt(br.readLine());
+            System.out.println("Please enter the name:");
+            name = br.readLine();
+            return this;
+        }
+    }
+
+
+public enum Breed {
+    Retriever, Bulldog, Poodle, Rottweiler, Boxer, Chihuahua, Dalmatian, German_Shepherd
+}
