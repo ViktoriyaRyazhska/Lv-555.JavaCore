@@ -1,0 +1,40 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	Scanner in = new Scanner(System.in);
+
+	    System.out.println("Вартість дзвінка першого за хвилину");
+	    double x1 = in.nextInt();
+
+        System.out.println("Вартість дзвінка другого за хвилину");
+        double x2 = in.nextInt();
+
+        System.out.println("Вартість дзвінка третього за хвилину");
+        double x3 = in.nextInt();
+
+
+        System.out.println("Введіть тривалість першого дзвінка");
+        double t1 = in.nextInt();
+
+        System.out.println("Введіть тривалість другого дзвінка");
+        double t2 = in.nextInt();
+
+        System.out.println("Введіть тривалість третього дзвінка");
+        double t3 = in.nextInt();
+
+        double s1 = x1 * t1;
+        double s2 = x2 * t2;
+        double s3 = x3 * t3;
+        double suma = s1 + s2 + s3;
+
+        System.out.println("Ціна першого дзвінка = " + s1);
+        System.out.println("Ціна другого дзвінка = " + s2);
+        System.out.println("Ціна третього дзвінка = " + s3);
+        System.out.println("Сума всіх дзвінків = " + suma);
+
+    }
+}
