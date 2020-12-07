@@ -19,7 +19,7 @@ public class Taska3 {
                 if (counter == 3) {
                     System.out.println("All of your numbers are belong to range [-5,5]");
                 } else {
-                    System.out.println("Only " + counter + " Number(s) belongs to range [-5,5]");
+                    System.out.println("Only " + counter + " number(s) belongs to range [-5,5]");
                 }
             }
         }
