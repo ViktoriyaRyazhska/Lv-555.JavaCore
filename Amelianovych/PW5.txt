@@ -1,0 +1,96 @@
+/* PRACTICAL TASK 1
+public class ArraysTask {
+    public static void main(String[] args) {
+        int [] arr = {2, -2, 1, 3, -5, 3, 10, -10, -9, 11};
+        int max = arr [0];
+        int sumPos = 0;
+        int sumNeg = 0;
+        int qPos = 0;
+        int qNeg = 0;
+
+        for (int i = 0; i < arr.length; i++){
+            if(max < arr[i]) max = arr[i];
+        }
+        System.out.println("The max value is " + max);
+        for(int j = 0; j < arr.length; j++ ){
+            if (arr[j] > 0) {sumPos+=arr[j]; qPos++;}
+            else {sumNeg += arr[j]; qNeg++;}
+            }
+        System.out.println("Sum of positive = " + sumPos);
+        System.out.println("Sum of negative = " + sumNeg);
+        if (qNeg > qNeg) System.out.println("More negative values in the arr");
+        else System.out.println("More positive values in the arr");
+
+    }
+}
+*/
+//Practical task 2
+public class Employee {
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", deptNumber=" + deptNumber +
+                ", salary=" + salary +
+                '}';
+    }
+
+    String name;
+    int deptNumber;
+    int salary;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getDeptNumber() {
+        return deptNumber;
+    }
+    public void setDeptNumber(int deptNumber) {
+        this.deptNumber = deptNumber;
+    }
+    public int getSalary() {
+        return salary;
+    }
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+    public Employee (String name, int deptNumber, int salary){
+        this.name = name;
+        this.deptNumber = deptNumber;
+        this.salary = salary;
+    }
+}
+public class Task {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Employee[] emp = new Employee[5];
+        emp[0] = new Employee("Andy", 1, 1200);
+        emp[1] = new Employee("Nancy", 2, 1250);
+        emp[2] = new Employee("Vlad", 3, 1315);
+        emp[3] = new Employee("Gary", 1, 1500);
+        emp[4] = new Employee("Kevin", 2, 1100);
+        System.out.println("Please enter a department number");
+        int d = sc.nextInt();
+        for (int i = 0; i < emp.length; i++) {
+            if (d == emp[i].getDeptNumber()) {
+                System.out.println(emp[i]);
+            }
+        }
+        int tmp;
+        for (int i = 0; i < emp.length - 1; i++) {
+            for (int j = i + 1; j < emp.length; j++) {
+                if (emp[i].getSalary() < emp[j].getSalary()) {
+                    tmp = emp[i].getSalary();
+                    emp[i].setSalary(emp[j].getSalary());
+                    emp[j].setSalary(tmp);
+                }
+            }
+        }
+        for (int i = 0; i < emp.length; i++) {
+            System.out.println(emp[i]);
+
+        }
+    }
+}
