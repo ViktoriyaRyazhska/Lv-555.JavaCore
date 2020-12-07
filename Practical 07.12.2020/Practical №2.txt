@@ -1,0 +1,61 @@
+package com.company;
+
+public class Employee {
+
+
+    private String name;
+    private String job;
+    private int money;
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+
+    public Employee(String name, String job, int money) {
+        this.name = name;
+        this.job = job;
+        this.money = money;
+
+    }
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public Employee() {
+        this.name = name;
+    }
+
+
+    public static void main(String[] args) {
+        Employee a1 = new Employee(" Roman ", "Ingener ", 17008);
+        Employee a2 = new Employee(" Yaroslav ", "Meneger ", 17700);
+        Employee a3 = new Employee(" Yaroslav ", "Ingener ", 17000);
+        Employee a4 = new Employee(" Yaroslav ", "Driver ", 17040);
+        Employee a5 = new Employee(" Yaroslav ", "Ingener ", 17000);
+
+
+        int[] arq = {a1.money , a2.money , a3.money , a4.money , a5.money};
+        String[] ar = {a1.getName(), a2.getName(), a3.getName(), a4.getName(), a5.getName()};
+        String[] arr = {a1.getJob(), a2.getJob(), a3.getJob(), a4.getJob(), a5.getJob()};
+
+
+        for (int b = 0; b < arr.length; b++) {
+            System.out.println("Name" + (ar[b]) + "Job:"+ (arr[b]) + "Money = "+ (arq[b]));
+
+
+        }
+
+
+    }
+}

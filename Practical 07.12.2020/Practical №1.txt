@@ -1,0 +1,24 @@
+package com.company;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int[] arr = {1, 2, 3, -4, 5, 6, -7, 8, 9, 10};
+
+		for (int a = 0; a < arr.length; a++) {
+			System.out.println(arr[a]);
+		}
+
+
+		System.out.println("Sum = " + getSum(arr));
+
+	}
+
+	public static int getSum(int[] arr) {
+		int sum = 0;
+		for (int a = 0; a < arr.length; a++) {
+			sum += arr[a];
+		}
+		return sum;
+	}
+}
