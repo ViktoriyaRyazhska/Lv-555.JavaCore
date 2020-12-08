@@ -1,0 +1,173 @@
+    public static void main(String[] args) {
+
+//        //1st task
+
+        Scanner sc = new Scanner(System.in);
+        int monthDays[ ]  = {31, 28, 31, 30, 31, 30,
+                31, 31, 30, 31, 30, 31} ;
+        System.out.println("Please enter a number of the month:");
+        int month = sc.nextInt();
+        switch (month){
+            case 1:
+                System.out.println(monthDays[0]); break;
+            case 2:
+                System.out.println(monthDays[1]);break;
+            case 3:
+                System.out.println(monthDays[2]);break;
+            case 4:
+                System.out.println(monthDays[3]);break;
+            case 5:
+                System.out.println(monthDays[4]);break;
+            case 6:
+                System.out.println(monthDays[5]);break;
+            case 7:
+                System.out.println(monthDays[6]);break;
+            case 8:
+                System.out.println(monthDays[7]);break;
+            case 9:
+                System.out.println(monthDays[8]);break;
+            case 10:
+                System.out.println(monthDays[9]);break;
+            case 11:
+                System.out.println(monthDays[10]);break;
+            case 12:
+                System.out.println(monthDays[11]);break;
+            default:
+                System.out.println("You're entered incorrect value");
+        }
+
+        //2nd task
+
+        System.out.println("Please enter a 10 integer digits: ");
+        int[] arr = new int[10];
+        arr [0] = sc.nextInt();
+        arr [1] = sc.nextInt();
+        arr [2] = sc.nextInt();
+        arr [3] = sc.nextInt();
+        arr [4] = sc.nextInt();
+        arr [5] = sc.nextInt();
+        arr [6] = sc.nextInt();
+        arr [7] = sc.nextInt();
+        arr [8] = sc.nextInt();
+        arr [9] = sc.nextInt();
+        if(arr[0] > 0 && arr[1] > 0 && arr[2] > 0 && arr[3] > 0 && arr[4] > 0){
+            int m = arr[0] + arr[1] + arr[2] + arr[3] + arr[4];
+            System.out.println(m);
+        }
+        else {
+            int m = arr[5] + arr[6] + arr[7] + arr[8] + arr[9];
+            System.out.println(m);
+        }
+
+        //Task 3
+
+        int[] pos = new int[5];
+        int n = 0;
+        int in = 0;
+        System.out.println("Please enter a 5 integer digits:");
+        pos[0] = sc.nextInt();
+        pos[1] = sc.nextInt();
+        pos[2] = sc.nextInt();
+        pos[3] = sc.nextInt();
+        pos[4] = sc.nextInt();
+        int min = pos[0];
+        int imin = 0;
+        int s = 0;
+        while (s < pos.length) {
+            if (pos[s] < min) {
+                min = pos[s];
+                imin = s;
+            }
+            s++;
+        }
+            System.out.print("Minimum = " + min);
+            System.out.println(" is in " + (imin + 1) + " place");
+
+
+            for (int i = 0; i < pos.length; i++) {
+            if (pos[i] > 0) {
+                n++;
+                }
+            if (n == 2){
+                in = i + 1;
+            }
+        }
+        System.out.println("2nd positive is in " + in  + " place");
+        int numb;
+        int prod = 1;
+        System.out.println("Please enter a numbers until the first negative number ");
+        do {
+            numb = sc.nextInt();
+            if (numb % 2 == 0) {
+                prod *= numb;
+            }
+        }
+        while (numb > 0);
+        System.out.println(prod);
+
+        Car[] cars = new Car[4];
+        cars[0] = new Car("VW", 2011, 2000);
+        cars[1] = new Car("Porsche", 2014, 2200);
+        cars[2] = new Car("Mercedes", 2017, 3200);
+        cars[3] = new Car("BMW", 2006, 1950);
+        System.out.println("Please enter a year of model production");
+        int d = sc.nextInt();
+        for (int k = 0; k < arr.length; k++) {
+            if (d == cars[k].getYearOfProd()) {
+                System.out.println(arr[k]);
+            }
+        }
+
+        int tmp;
+        for (int v = 0; v < arr.length-1; v++){
+          for (int x = v+1; x < arr.length; x++) {
+            if (cars[v].getYearOfProd() > cars [x].getYearOfProd()){
+                tmp = cars[x].getYearOfProd();
+                cars[x].setYearOfProd(cars[v].getYearOfProd());
+                cars[v].setYearOfProd(tmp);
+            }
+        }
+        }
+        for (int v = 0; v < arr.length; v++){
+            System.out.println(arr[v]);
+        }
+
+    }
+}
+
+class Car {
+    private String type;
+    private int yearOfProd;
+    private int engineCap;
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public int getYearOfProd() {
+        return yearOfProd;
+    }
+    public void setYearOfProd(int yearOfProd) {
+        this.yearOfProd = yearOfProd;
+    }
+    public int getEngineCap() {
+        return engineCap;
+    }
+    public void setEngineCap(int engineCap) {
+        this.engineCap = engineCap;
+    }
+    @Override
+    public String toString() {
+        return "Car{" +
+                "type='" + type + '\'' +
+                ", yearOfProd=" + yearOfProd +
+                ", engineCap=" + engineCap +
+                '}';
+    }
+    public Car(String type, int yearOfProd, int engineCap){
+        this.engineCap = engineCap;
+        this.type = type;
+        this.yearOfProd = yearOfProd;
+    }
+}
