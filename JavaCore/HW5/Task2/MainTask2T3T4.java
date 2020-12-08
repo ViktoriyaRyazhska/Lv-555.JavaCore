@@ -6,5 +6,8 @@ public class MainTask2T3T4 {
         Scanner sc = new Scanner(System.in);
         Task2 arr = new Task2(sc);
         arr.SumOrProd();
+        Task3 arr1 = new Task3(sc);
+        arr1.SecPosPosition();
+        arr1.PosMin();
     }
 }

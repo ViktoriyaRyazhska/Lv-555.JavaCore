@@ -5,10 +5,11 @@ public class Task2 {
     private int sum = 0;
     private int product = 1;
     private int[] arr;
+    private int i;
 
     public Task2(Scanner sc) {
         this.arr = new int[10];
-        for (int i = 0; i < arr.length; i++) {
+        for (i = 0; i < arr.length; i++) {
             System.out.println("Enter element number " + (i+1) + ": ");
             arr[i] = sc.nextInt();
         }
@@ -16,7 +17,7 @@ public class Task2 {
     }
 
     public void SumOrProd() {
-        for (int i = 0; i < arr.length / 2; i++) {
+        for (i = 0; i < arr.length / 2; i++) {
             if (arr[i] > 0) {
                 sum += arr[i];
             }
@@ -24,8 +25,8 @@ public class Task2 {
         if (sum >= 5) {
             System.out.println("Sum = " + sum);
         } else {
-            for (int j = 5; j < arr.length; j++) {
-                product *= arr[j];
+            for (i = 5; i < arr.length; i++) {
+                product *= arr[i];
             }
             System.out.println("Product = " + product);
         }
