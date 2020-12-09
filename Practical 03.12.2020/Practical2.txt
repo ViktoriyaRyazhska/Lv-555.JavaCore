@@ -1,0 +1,41 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введіть число");
+        int x = sc.nextInt();
+
+        switch (x){
+            case 1:
+                System.out.println("Mondey, понеділок, ponedgaver");
+                break;
+
+            case 2:
+                System.out.println("Tuesday, вівторок, vtorek");
+                break;
+
+            case 3:
+                System.out.println("Wednesday, середа, shroda");
+                break;
+
+            case 4:
+                System.out.println("Thursday, четвер, chwartek");
+                break;
+            case 5:
+                System.out.println("Friday, п'ятниця, pyontek");
+                break;
+            case 6:
+                System.out.println("Saturday, субота, subota");
+                break;
+            case 7:
+                System.out.println("Sunday, неділя, negela");
+                break;
+        }
+
+
+
+
+    }
+}
