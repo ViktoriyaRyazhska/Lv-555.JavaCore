@@ -1,0 +1,14 @@
+package com.company;
+
+public class Punguin extends Notfly {
+    final String TYPE_BIRD = "Пінгвін";
+    Punguin(){
+        System.out.println(TYPE_BIRD);
+    }
+
+    @Override
+    public void notfly() {
+        System.out.println(TYPE_BIRD + " Не вміє літати");
+    }
+
+}
