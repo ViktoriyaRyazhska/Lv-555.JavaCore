@@ -6,6 +6,7 @@ public abstract class Person {
     public abstract void print();
 
     public Person(String name) {
+
         this.name = name;
     }
 
