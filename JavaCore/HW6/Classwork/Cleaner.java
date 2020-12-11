@@ -2,7 +2,7 @@ public class Cleaner extends Staff {
     final private String TYPE_PERSON = "Cleaner";
 
     @Override
-    public String print() {//цей метод повторюється для кожного конкретного класу. Не придумав як його записати 1 раз для всіх однаково не міняючи абсрактний метод
+    public String print() {//цей метод повторюється для кожного конкретного класу. Не придумав як його записати 1 раз для всіх однаково 
         return " says: I am a " + TYPE_PERSON;
     }
 
