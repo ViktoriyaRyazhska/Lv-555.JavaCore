@@ -1,0 +1,34 @@
+package com.company;
+
+public class ContractEmployee extends Employee {
+    public String employeeid1;
+    public String name;
+    public String socialSecutytiNumber;
+    public int hourly_rate;
+    public int number_of_hours_worked;
+    public int salary;
+
+    public ContractEmployee(String employeeid1, String name, String socialSecutytiNumber, int hourly_rate, int number_of_hours_worked) {
+        super();
+        this.employeeid1 = employeeid1;
+        this.name = name;
+        this.socialSecutytiNumber = socialSecutytiNumber;
+        this.hourly_rate = hourly_rate;
+        this.number_of_hours_worked = number_of_hours_worked;
+
+    }
+
+
+
+
+
+
+    @Override
+        public void calculatePay() {
+        System.out.println( "Індифікатор: " + employeeid1 + " Ім'я: " + name + " Соціальний номер: " + socialSecutytiNumber + " Salary: " +  (salary = (hourly_rate * number_of_hours_worked)));
+
+        }
+    }
+
+
+
