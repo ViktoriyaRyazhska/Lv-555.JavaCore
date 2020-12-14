@@ -1,0 +1,77 @@
+public abstract class Person {
+    private String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String name;
+    abstract void print();
+}
+public abstract class Staff extends Person {
+    public int salary(){
+        return 0;
+    }
+}
+public class Student extends Person {
+    public final String TYPE_PERSON;
+
+    public Student(String type_person) {
+        TYPE_PERSON = type_person;
+    }
+
+    @Override
+    void print() {
+        System.out.println("I'm a student");
+    }
+}
+public class Teacher extends Staff {
+    public final String TYPE_PERSON;
+
+    public Teacher(String type_person) {
+        TYPE_PERSON = type_person;
+    }
+
+    public int salary (){
+        return 2100;
+    }
+
+    @Override
+    void print() {
+        System.out.println("I'm a teacher");
+    }
+
+}
+public class Cleaner extends Staff{
+    public final String TYPE_PERSON;
+
+    public Cleaner(String type_person) {
+        TYPE_PERSON = type_person;
+    }
+    @Override
+    void print() {
+        System.out.println("I'm a cleaner");
+    }
+    public int salary (){
+        return 1200;
+    }
+}
+public class PersonsArr {
+    public static void main(String[] args) {
+        Person[] arr = new Person[6];
+        arr[0] = new Cleaner("Cleaner");
+        arr[1] = new Student("Student");
+        arr[2] = new Teacher("Teacher");
+        arr[3] = new Student("Student");
+        arr[4] = new Cleaner("Cleaner");
+        arr[5] = new Teacher("Teacher");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i].print();
+            if ( arr[i] instanceof Staff) {
+                System.out.println("My salary is :"+((Staff) arr[i]).salary());
+            }
+        }
+    }
+}
