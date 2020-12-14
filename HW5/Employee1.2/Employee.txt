@@ -1,10 +1,16 @@
 package com.company;
 
 public class Employee {
-    void calculatePay() {
 
+    void calculatePay() {
     }
 
-
+    public String employeeid;
+    public String name;
+    public String socialSecutytiNumber;
+    public int fixedSalary;
+    public int hourly_rate;
+    public int number_of_hours_worked;
+    public int salary;
 
 }
