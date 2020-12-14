@@ -1,0 +1,54 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Введіть 5 цілих чисел");
+        Scanner sc = new Scanner(System.in);
+
+        int x1 = sc.nextInt();
+        int x2 = sc.nextInt();
+        int x3 = sc.nextInt();
+        int x4 = sc.nextInt();
+        int x5 = sc.nextInt();
+
+        int[] arr = {x1, x2, x3, x4, x5};
+        int y = 0;
+
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] >= 0) {
+                y++;
+                if (y == 2);
+                System.out.println("Положення другого додатнього числа = " + (i + 1));
+            }
+        }
+
+        int min = arr[0];
+        int imin = 0;
+        int i = 0;
+        while (i < arr.length) {
+            if (arr[i] < min) {
+                min = arr[i];
+                imin = i;
+            }
+            i++;
+        }
+        System.out.println("Мінімальне число = " + min + " його положення = " + (imin + 1));
+
+        int z = 1;
+        int a = 0;
+        while (true) {
+            System.out.println("Введіть число");
+            a = sc.nextInt();
+            if (a < 0)
+                break;
+            if(a%2 == 0)
+                z*=a;
+            }
+        System.out.println("Добуток усіх парних чисел = " + z);
+        }
+
+    }
