@@ -1,3 +1,49 @@
+public interface Animal {
+    void voice ();
+    void feed ();
+}
+public class Dog implements Animal {
+    @Override
+    public void feed() {
+        System.out.println("Dog is eating");
+    }
+
+    @Override
+    public void voice() {
+        System.out.println("Bark");
+    }
+}
+public class Cat implements Animal {
+    @Override
+    public void voice() {
+        System.out.println("Meow");
+    }
+
+    @Override
+    public void feed() {
+        System.out.println("Cat is eating");
+    }
+}
+public class Animals{
+    public static void main(String[] args) {
+        Animal [] animals = new Animal[5];
+        animals [0] = new Cat();
+        animals [1] = new Dog();
+        animals [2] = new Cat();
+        animals [3] = new Dog();
+        animals [4] = new Cat();
+for (int i = 0; i<animals.length; i++){
+    animals[i].voice();
+    animals[i].feed();
+}
+
+    }
+}
+
+
+//2nd task
+
+
 public abstract class Person {
     private String getName() {
         return name;
