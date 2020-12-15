@@ -2,6 +2,10 @@ package com.company;
 
 public class ContractEmployee extends Employee {
 
+    public int hourly_rate;
+    public int number_of_hours_worked;
+    public int salary;
+
     public ContractEmployee(String employeeid, String name, String socialSecutytiNumber, int hourly_rate, int number_of_hours_worked) {
         super();
         this.employeeid = employeeid;
@@ -18,6 +22,7 @@ public class ContractEmployee extends Employee {
 
         }
     }
+
 
 
 

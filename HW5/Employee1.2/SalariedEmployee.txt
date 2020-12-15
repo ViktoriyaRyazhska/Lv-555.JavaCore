@@ -2,9 +2,10 @@ package com.company;
 
 public class SalariedEmployee extends Employee {
 
+    public int fixedSalary;
+
 
     public SalariedEmployee(String employeeid, String name, String socialSecutytiNumber, int fixedSalary) {
-        super();
         this.employeeid = employeeid;
         this.name = name;
         this.socialSecutytiNumber = socialSecutytiNumber;
