@@ -6,7 +6,7 @@ public class Main {
 
 
         Employee[] arr = {
-                new SalariedEmployee("252", "Yaroslaw", "11111111", 12000),
+                new SalariedEmployee("252", "Yaroslaw", "11111111", 120000),
                 new SalariedEmployee("468", "Roman", "222222222", 15000),
                 new ContractEmployee("222", "Volodimir", "3333333333", 400, 15),
                 new ContractEmployee("584", "Mariya", "444444444", 400, 30)
@@ -14,15 +14,16 @@ public class Main {
 
 
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
+
+            for (int j = i; j < arr.length;j++) {
 
                 Employee tmp = arr[j];
                 arr[j] = arr[i];
                 arr[i] = tmp;
+
+                arr[i].calculatePay();
             }
 
-
-            arr[i].calculatePay();
         }
     }
 }
