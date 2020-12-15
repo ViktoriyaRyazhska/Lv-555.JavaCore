@@ -1,0 +1,18 @@
+package com.company;
+
+public class SalariedEmployee extends Employee {
+    final String employeeld = "One of the children";
+    SalariedEmployee(){
+        System.out.println(employeeld);
+    }
+    final String socialSecurityNumber  = "Social number 25";
+     {
+        System.out.println(socialSecurityNumber);
+    }
+
+
+    @Override
+    public void calculatePay() {
+        System.out.println("Yaroslav = " + employeeld);
+    }
+}
