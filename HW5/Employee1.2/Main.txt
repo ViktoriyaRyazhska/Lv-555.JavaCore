@@ -20,24 +20,9 @@ public class Main {
                 Employee tmp = arr[j];
                 arr[j] = arr[i];
                 arr[i] = tmp;
-
-                arr[i].calculatePay();
             }
+                arr[i].calculatePay();
 
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
