@@ -13,6 +13,7 @@ public class Classwork5 {
         calcSumPositive(numbers);
         countNegative(numbers);
 
+
         Employee [] workers = new Employee[5];
         workers[0] = new Employee("Petrov", 2, 1000);
         workers[1] = new Employee("Sidorov", 5, 2000);
@@ -29,19 +30,7 @@ public class Classwork5 {
             }
         }
 
-        //arrange workers by the field salary in descending order
-        int tmp;
-        for (int i = 0; i < workers.length - 1; i++) {
-            for (int j = i + 1; j < workers.length; j++) {
-                if (workers[i].getSalary() < workers[j].getSalary()) {
-                    tmp = workers[i].getSalary();
-                    workers[i].setSalary(workers[j].getSalary());
-                    workers[j].setSalary(tmp);
-                }
-            }
-            System.out.println(workers[i]);
-        }
-        //System.out.println(Arrays.toString(workers));
+        arrangeSalaryDescendinng(workers);
     }
 
     public static void findBiggestNumber(int [] numbers){
@@ -72,5 +61,19 @@ public class Classwork5 {
             }
         }
         System.out.println("Amount of negative numbers" + amountNegative);
+    }
+
+    //arrange workers by the field salary in descending order
+    public static void arrangeSalaryDescendinng(Employee[] workers){
+        for (int i = 0; i < workers.length - 1; i++) {
+            for (int j = i + 1; j < workers.length; j++) {
+                if (workers[i].getSalary() < workers[j].getSalary()) {
+                    Employee tmp = workers[i];
+                    workers[i] = workers[j];
+                    workers[j] = tmp;
+                }
+            }
+            System.out.println(workers[i]);
+        }
     }
 }

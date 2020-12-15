@@ -20,7 +20,7 @@ public class Homework5d {
     }
 
     public static void displayCarByYear(BufferedReader reader, Car[] cars) throws IOException {
-        System.out.println("Enter year of production:");
+        System.out.println("Enter year of production:>");
         int inputYear = Integer.parseInt(reader.readLine());
         for (int i = 0; i < cars.length; i++) {
             if(cars[i].getYearOfProduction() == inputYear){
@@ -30,13 +30,13 @@ public class Homework5d {
     }
 
     public static void orderedByYear(Car[] cars){
-        int tmp;
+
         for (int i = 0; i < cars.length - 1; i++) {
             for (int j = i + 1; j < cars.length; j++) {
                 if(cars[i].getYearOfProduction() > cars[j].getYearOfProduction()){
-                    tmp = cars[i].getYearOfProduction();
-                    cars[i].setYearOfProduction(cars[j].getYearOfProduction());
-                    cars[j].setYearOfProduction(tmp);
+                    Car tmp = cars[i];
+                    cars[i] = cars[j];
+                    cars[j] = tmp;
                 }
             }
         }
