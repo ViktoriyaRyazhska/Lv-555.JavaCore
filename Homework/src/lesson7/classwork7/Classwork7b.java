@@ -3,6 +3,7 @@ package lesson7.classwork7;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,14 +48,16 @@ public class Classwork7b {
         System.out.println("\n Please, enter name:>");
         String name = reader.readLine();
 
-        for(Map.Entry<Integer, String> entry: map.entrySet()) {
-            while (entry.getValue().equals(name)) {
-                System.out.println("Entered name is " + entry.getValue() + ", ID = " + entry.getKey());
-                break;
-            }
-        }
         if(!map.containsValue(name)){
             System.out.println("There is no such name");
+            return;
+        }
+
+        for(Map.Entry<Integer, String> entry: map.entrySet()) {
+            if(entry.getValue().equals(name)) {
+                System.out.println("Entered name is " + entry.getValue() + ", ID = " + entry.getKey());
+            }
         }
     }
+
 }
