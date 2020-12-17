@@ -22,7 +22,12 @@ public class Classwork7b {
         employeeMap.put(7, "Ivan");
 
         printMap(employeeMap);
-        searchByIdNumber(reader, employeeMap);
+
+        System.out.print("\n Please, enter ID:> ");
+        int idNumber = Integer.parseInt(reader.readLine());
+        searchByIdNumber(employeeMap, idNumber);
+        optimizedSearchById(employeeMap, idNumber);
+
         searchByName(reader, employeeMap);
     }
 
@@ -32,10 +37,8 @@ public class Classwork7b {
         }
     }
 
-    public static void searchByIdNumber(BufferedReader reader, Map<Integer, String> map) throws IOException {
-        System.out.println("\n Please, enter ID:>");
-        int idNumber = Integer.parseInt(reader.readLine());
-
+    public static void searchByIdNumber(Map<Integer, String> map, int idNumber){
+        System.out.println("Search using function containsKey()");
         if(map.containsKey(idNumber)){
             System.out.println("Entered ID = " + idNumber + ", name is " + map.get(idNumber));
         }
@@ -44,8 +47,19 @@ public class Classwork7b {
         }
     }
 
+    public static void optimizedSearchById(Map<Integer, String> map, int idNumber) {
+        System.out.println("Optimized search");
+        String name = map.get(idNumber);
+        if(name != null){
+            System.out.println("Entered ID = " + idNumber + ", name is " + name);
+        }
+        else {
+            System.out.println("There is no such ID");
+        }
+    }
+
     public static void searchByName(BufferedReader reader, Map<Integer, String> map) throws IOException {
-        System.out.println("\n Please, enter name:>");
+        System.out.print("\n Please, enter name:> ");
         String name = reader.readLine();
 
         if(!map.containsValue(name)){
