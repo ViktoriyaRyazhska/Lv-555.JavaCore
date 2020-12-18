@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
         Map<String, String> personMap = new HashMap<>();
         personMap.put("Pavlov", "Orest");
         personMap.put("Pavlenko", "Orest");
@@ -15,7 +16,7 @@ public class Main {
         personMap.put("Mima", "Popala");
         System.out.println(personMap);
         duplicate(personMap);
-        removeDuplicates(personMap, "Orest");
+        removeByValue(personMap, "Orest");
         System.out.println(personMap);
     }
 
@@ -28,8 +29,8 @@ public class Main {
         }
     }
 
-    public static void removeDuplicates(Map<String, String> map, String value) {
-       // map.entrySet().removeIf(entry -> entry.getValue().equals(value));
+    public static void removeByValue(Map<String, String> map, String value) {
+        // map.entrySet().removeIf(entry -> entry.getValue().equals(value));
         //IDE пропонує замінити for на попередню лямбду. Мені просто дуже подобається)
         for (Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
             Map.Entry<String, String> entry = iterator.next();
