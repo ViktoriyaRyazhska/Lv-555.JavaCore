@@ -12,11 +12,13 @@ public class Main {
         employeeMap.put(6,"F");
         employeeMap.put(7,"G");
         System.out.println(employeeMap);
-        findValue(3,employeeMap);
-        findID("A",employeeMap);
+        findValue(1,employeeMap);
+        findID("C",employeeMap);
     }public static void findValue(int id, Map<Integer, String> map){
         if(map.containsKey(id)){
             System.out.println(map.get(id));
+        }else{
+            System.out.println("There is no " + id);
         }
     }public static void findID(String value, Map<Integer, String> map){
         for (Map.Entry<Integer, String> entry: map.entrySet()) {
@@ -24,8 +26,11 @@ public class Main {
                 if(entry.getValue().equals(value)){
                     System.out.println(entry.getKey());
                 }
-            }
 
+            }else {
+                System.out.println("There is no " + value);
+                break;
+            }
         }
     }
 }
