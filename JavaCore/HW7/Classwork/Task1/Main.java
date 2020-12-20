@@ -21,9 +21,9 @@ public class Main {
             }
         }
         System.out.println(myCollection);
-        myCollection.add(2,-1);
-        myCollection.add(5,-3);
-        myCollection.add(8,-4);
+        CheckAndAdd(myCollection, 2,-1);
+        CheckAndAdd(myCollection,5,-3);
+        CheckAndAdd(myCollection,8,-4);
 
         for (int i = 0; i < myCollection.size(); i++) {
             System.out.println("position - " + i +"," + " value " + myCollection.get(i));
@@ -31,7 +31,13 @@ public class Main {
         Collections.sort(myCollection);
         System.out.println(myCollection);
 
+        //признаюсь, підглянува це рішення. Воно найкомпактніше, мені сподобалось, але я в ньому розібрався, не копіпастнув.
+    }public static void CheckAndAdd (List<Integer> integerList, int index, int element) {
+        if(integerList.size() >= index){
+            integerList.add(index,element);
+        }
     }
+
 }
 
 
