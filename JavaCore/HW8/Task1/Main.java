@@ -24,7 +24,7 @@ public class Main {
 
             //вийти якщо користувач введе більше 5 раз неправильно
             //Тут теж трошки бавився
-            if(count => 5){
+            if(count > 4){
                 System.out.println("Are you kidding me? Ok. I`m done! Bye!");
                 break;
             }
