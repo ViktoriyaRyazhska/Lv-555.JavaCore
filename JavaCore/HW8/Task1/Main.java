@@ -10,7 +10,7 @@ public class Main {
         String fiveWordsSentence;
 
         System.out.print("Enter sentence of 5 words: ");
-        fiveWordsSentence = scanner.nextLine();
+        fiveWordsSentence = scanner.nextLine().trim();
         strings = fiveWordsSentence.split("[ ,]+");
 
         //перевірка на кількість слів
@@ -18,7 +18,7 @@ public class Main {
         while (strings.length > 5) {
             System.out.println("No more than 5 words!");
             System.out.println("Try again.");
-            fiveWordsSentence = scanner.nextLine();
+            fiveWordsSentence = scanner.nextLine().trim();
             strings = fiveWordsSentence.split("[ ,]+");
             count++;
 
@@ -37,7 +37,7 @@ public class Main {
         }
         System.out.println("Longest word: " + longestWord);
         System.out.println("The number of letters in the longest word: " + longestWord.length());
-        System.out.println("Reverse word: " + reverseString(strings[1]));
+        System.out.println("Reverse second word: " + reverseString(strings[1]));
 
     }
 
