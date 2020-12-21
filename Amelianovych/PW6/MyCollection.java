@@ -1,4 +1,4 @@
-package PW7;
+package PW6;
 
 import java.util.*;
 

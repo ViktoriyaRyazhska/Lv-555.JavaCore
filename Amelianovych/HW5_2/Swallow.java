@@ -1,4 +1,4 @@
-package HW6;
+package HW5_2;
 
 public class Swallow extends FlyingBird {
     public Swallow(String feathers, int layEggs) {

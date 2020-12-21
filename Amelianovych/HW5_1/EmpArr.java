@@ -1,4 +1,4 @@
-package HW6_2;
+package HW5_1;
 
 public class EmpArr {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package HW6;
+package HW5_2;
 
 public class Chicken extends NonFlyingBird {
     public Chicken(String feathers, int layEggs) {

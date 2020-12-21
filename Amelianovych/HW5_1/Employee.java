@@ -1,4 +1,4 @@
-package HW6_2;
+package HW5_1;
 
 public abstract class Employee implements Pay{
     public int employeeld;
