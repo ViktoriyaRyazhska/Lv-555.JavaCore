@@ -1,0 +1,11 @@
+package com.company;
+
+public class Eagle extends Fly {
+    final String TYPE_BIRD = "Орел";
+
+    @Override
+    public void fly() {
+
+        System.out.println(TYPE_BIRD +" Вміє літати");
+    }
+}

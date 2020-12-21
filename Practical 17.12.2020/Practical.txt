@@ -1,0 +1,43 @@
+package com.company;
+
+
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class Main {
+
+	public static void main(String[] args) {	
+
+
+		String pattern = "[Roman, Hera, Yaroslavovich, Irina, Maya ]+";
+		String text = "Hera, Roman, Yaroslavovich, Irina, Maya";
+		String[] AG = text.split(" ");
+
+		for (int i = 0; i < AG.length; i++) {
+			System.out.println(AG[i]);
+		}
+
+		String str = new String(text);
+		str.substring(0, 5).toLowerCase();
+		str.substring(7, 12).toLowerCase();
+		str.substring(14, 20).toLowerCase();
+
+
+		System.out.println(str);
+
+
+		Pattern p = Pattern.compile(pattern);
+		Matcher m = p.matcher(text);
+
+		if (m.matches()) {
+			System.out.println("Matcher the entire text string"); }
+		m.reset();
+
+			while (m.find()) {
+				System.out.println(text.substring(m.start(), m.end()) + "");
+			}
+
+
+
+	}
+}
