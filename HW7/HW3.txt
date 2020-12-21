@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.regex.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String pattern = "[$0-9.,]+";
+        String text = "Starting amount: $ 2000.98,  Attachments:  $ 4500.99, Attachments: $5000.25, Attachments: $6842.42  ";
+
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(text);
+        while (m.find()) {
+            System.out.print(text.substring(m.start(), m.end()) + " ");
+        }
+    }
+
+}
