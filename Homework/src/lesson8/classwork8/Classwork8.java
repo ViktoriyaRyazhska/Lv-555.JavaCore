@@ -3,8 +3,10 @@ package lesson8.classwork8;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class Classwork {
+public class Classwork8 {
     public static void main(String[] args) throws IOException {
         System.out.println("----Task1----");
         String s1 = "IT";
@@ -25,9 +27,22 @@ public class Classwork {
         System.out.println("Your surname and initials is " + arrFio[0] + " " + firstLetterName + ". " + firstLetterMiddleName + ".");
 
         System.out.println("\n----Task3----");
+        checkNameForValidity("Maya");
+        checkNameForValidity("Ma");
+        checkNameForValidity("Mayajfdljgifdjgijdfigji");
+        checkNameForValidity("%@Maya");
+        checkNameForValidity("_Maya");
 
+    }
 
-
+    public static void checkNameForValidity(String name){
+        Pattern p = Pattern.compile("[a-zA-Z_0-9]{3,15}");
+        Matcher m = p.matcher(name);
+        if(m.matches()){
+            System.out.println(name + " is a valid name");
+        }else {
+            System.out.println(name + " is an invalid name");
+        }
     }
 }
 
