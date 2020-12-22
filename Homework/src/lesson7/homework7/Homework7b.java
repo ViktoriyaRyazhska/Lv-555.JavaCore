@@ -1,9 +1,6 @@
 package lesson7.homework7;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Homework7b {
     public static void main(String[] args) {
@@ -16,6 +13,8 @@ public class Homework7b {
         }else {
             System.out.println("There are no people with the same name in the map");
         }
+
+        optimizedSearchSameName(personMap);
 
         removePersonByName(personMap, "Orest");
         printMap(personMap);
@@ -64,6 +63,16 @@ public class Homework7b {
             }
         }
         return result;
+    }
+
+    public static void optimizedSearchSameName(Map<String, String> map){
+        Set<String> setOfFirstNames = new HashSet<String>(map.values());
+        if(map.size() > setOfFirstNames.size()){
+            System.out.println("NEW There are people with the same first name in the map");
+        }else {
+            System.out.println("NEW There are NO people with the same name");
+        }
+
     }
 
     public static void removePersonByName(Map<String, String> map, String firstName){
