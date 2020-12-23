@@ -1,0 +1,15 @@
+package com.company;
+
+public class Main {
+
+
+
+    public static void main(String[] args) {
+        Person [] arr = {new Teacher(), new Student(), new Cleaner() };
+
+        for (int i = 0; i < arr.length; i++) {
+           arr[i].print();
+           arr[i].salary();
+        }
+    }
+}

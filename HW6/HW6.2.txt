@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+	HashMap map = new HashMap<String, String>();
+	    map.put("Roman", "Hera" );
+        map.put("Mariya", "Zelnuh" );
+        map.put("Roman", "Vovk" );
+        map.put("Irina", "Vovk" );
+        map.put("Yaroslav", "Hera" );
+        map.put("Volodimir", "Hera" );
+        map.put("Ivan", "Hera" );
+        map.put("Vasil", "Hera" );
+        map.put("Orest", "Vovk" );
+        map.put("Roksolana", "Vovk" );
+
+
+
+        map.remove("Orest"); // Видалення вказаного елемента
+
+        map.forEach((k, v) -> System.out.println("key=" + k +", value= " + v)); // Видаляє якщо є спільні імена
+
+        System.out.println(map); // Виводить всі елементи;
+
+
+    }
+}
