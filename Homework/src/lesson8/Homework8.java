@@ -1,4 +1,4 @@
-package lesson8.classwork8;
+package lesson8;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,12 +30,25 @@ public class Homework8 {
 
 
         System.out.println("\n-----Task2-----");
-        String sentence2 = "I    am      learning     Java   Core";
-        String[] arr = sentence2.split(" ");
-        for (String s : arr) {
-            if (!s.isEmpty())
-                System.out.print(s + " ");
-        }
+        String sentence2 = "I    am      learning     Java   Core. Who     is    on   duty? You   are the best!";
+
+        int length = sentence2.length();
+        do{
+            length = sentence2.length();
+            sentence2 = sentence2.replaceAll("  ", " ");
+        }while (length != sentence2.length());
+
+        sentence2 = sentence2.replaceAll(" am ", "'m ").
+                replaceAll(" are ", "'re ").
+                replaceAll(" is ", "'s ");
+
+        System.out.println(sentence2);
+
+//        String[] arr = sentence2.split(" ");
+//        for (String s : arr) {
+//            if (!s.isEmpty())
+//                System.out.print(s + " ");
+//        }
 
 
         System.out.println("\n-----Task3-----");
