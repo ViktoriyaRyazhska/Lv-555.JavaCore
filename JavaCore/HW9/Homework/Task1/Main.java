@@ -1,8 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+
 //Using this method write a method main(), that has to enter 10 numbers:
 //	a1, a2, ..., a10, such that 1 < a1 < ... < a10 < 100
 //Не розібрався всеодно(
@@ -11,7 +10,6 @@ public class Main {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         double numberA;
         double numberB;
-        List<Integer> list = new ArrayList<>(10);
         try {
             System.out.print("Enter first number: ");
             numberA = Double.parseDouble(bufferedReader.readLine());
