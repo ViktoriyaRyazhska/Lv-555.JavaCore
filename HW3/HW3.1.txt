@@ -1,0 +1,35 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public Main() {
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Введіть число x1 = ");
+        double x1 = sc.nextDouble();
+        System.out.println(" Введіть число x2 = ");
+        double x2 = sc.nextDouble();
+        System.out.println(" Введіть число x3 = ");
+        double x3 = sc.nextDouble();
+        if (-5.0D <= x1 && x1 <= 5.0D) {
+            System.out.println(" Число x1 належить до діапазон [-5, 5] " + x1);
+        }
+
+        if (-5.0D <= x2 && x2 <= 5.0D) {
+            System.out.println(" Число x2 належить до діапазон [-5, 5] " + x2);
+        }
+
+        if (-5.0D <= x3 && x3 <= 5.0D) {
+            System.out.println(" Число x3 належить до діапазон [-5, 5] " + x3);
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+package com.company;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Bird[] arr = {new Eagle(), new Swallow(), new Punguin(), new Chicken()};
+		for (int i = 0; i < arr.length; i++) {
+			arr[i].fly();
+			arr[i].notfly();
+		}
+	}
+
+}
+
+	
+
+
+
+
+
+    

@@ -1,0 +1,12 @@
+package com.company;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        String text = "I      am      learning     Java   Core";
+
+        System.out.println(text.replaceAll("\\s+"," ").replace("I am", "I'm"));
+        
+    }
+}

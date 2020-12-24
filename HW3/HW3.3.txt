@@ -1,0 +1,30 @@
+package com.company;
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введіть номер HTTP Error (400, 401, 402, 403)");
+        switch (sc.nextInt()) {
+            case 400:
+                System.out.println("HTTP Error 400 Bad Request вказує що сервер не зміг зрозуміти запит із недійогого синтаксиза");
+                break;
+            case 401:
+                System.out.println("HTTP Error 401 Bad Unauthorized вказує що запит не був застусований");
+                break;
+            case 402:
+                System.out.println("HTTP Error 402 Bad Payment Required передбачує застосування в майбутньому, в даний час не застосовується");
+                break;
+            case 403:
+                System.out.println("HTTP Error 403 Bad Fordidden вказує що сервер зрозумів запит, але відмовляє його авторизувати");
+                break;
+            default:
+                System.out.println("Не існує такої помилки");
+
+
+        }
+    }
+}

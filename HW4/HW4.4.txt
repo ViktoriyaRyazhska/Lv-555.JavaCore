@@ -1,0 +1,47 @@
+package com.company;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Car {
+
+
+    public Car(String Model, int year, int power) {
+    }
+
+
+
+        public static void main (String[]args){
+
+
+            Scanner sc = new Scanner(System.in);
+            Car[] arrc = {new Car("Sport", 2012, 200),
+                    new Car("Uniwersal", 2015, 150),
+                    new Car("Bus", 2016, 250),
+                    new Car("TIR", 2018, 800)};
+            System.out.println("Ведіть рік випуску автомобіля зі списку (2012, 2015, 2016, 2018)");
+            int year = sc.nextInt();
+            for (int i = 0; i < arrc.length; i++) {
+                if (year == arrc[i].getYear())
+                    System.out.println(arrc[i]);
+            }
+            Car tmp;
+            for (int i = 0; i < arrc.length - 1; i++) {
+                for (int a = i + 1; a < arrc.length; a++) {
+                    if (arrc[i].getYear() < arrc[a].getYear()) {
+                        tmp = arrc[i];
+                        arrc[i] = arrc[a];
+                        arrc[a] = tmp;
+
+                                        }
+                }
+            }
+            System.out.println(Arrays.toString(arrc));
+
+
+
+            }
+            
+    public int getYear () {
+            return 0;
+        }
+
+    }

@@ -1,0 +1,11 @@
+package com.company;
+
+public class Employee {
+    public String employeeid;
+    public String name;
+    public String socialSecutytiNumber;
+
+    void calculatePay() {
+
+    }
+}
