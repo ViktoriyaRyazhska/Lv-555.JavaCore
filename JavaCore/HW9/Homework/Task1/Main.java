@@ -1,52 +1,59 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
-//Using this method write a method main(), that has to enter 10 numbers:
-//	a1, a2, ..., a10, such that 1 < a1 < ... < a10 < 100
-//Не розібрався всеодно(
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        double numberA;
-        double numberB;
+        //Краще не придумав
+        int start = 1;
+        int end  = 15;
+        int[] arr = new int[10];
+        System.out.println("Each next number must be greater! Start!");
+        for (int i = 0; i < arr.length; i++) {
+            try { arr[i] = readNumber(start,end,bufferedReader);
+                if(i > 0){
+                    if(arr[i] < arr[i-1]){
+                        System.err.println("Told ya)");
+                        break;
+                    }
+                }
+            } catch (IOException | OutOfIntRange | NumberFormatException e) {
+                System.err.println(e.getMessage());
+                break;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+        double a = 6;
+        double b = 1;
         try {
-            System.out.print("Enter first number: ");
-            numberA = Double.parseDouble(bufferedReader.readLine());
-            System.out.print("Enter second number: ");
-            numberB = Double.parseDouble(bufferedReader.readLine());
-            div(numberA, numberB);
+            System.out.println(a + " / " + b + " = " + div(a,b));
             System.out.print("Try your lucky (tip: try to enter int number): ");
-            readNumber(10, 1, bufferedReader);
-
-        } catch (IOException | OutOfIntRange e) {
+            System.out.println("Nice, your number " + readNumber(10, 1, bufferedReader) + " is in the range ");
+        } catch (IOException | OutOfIntRange | ArithmeticException | NumberFormatException e) {
             System.err.println(e.getMessage());
-        } catch (NumberFormatException e) {
-            System.err.println("Oops, enter the desired data type");
         }
     }
-
-    //не получилось в мене щоб метод повертав тип double
-    //catch не ловив помилку ділення на 0 і результат завжди виводився Infinity
-    //Мені не дуже подобається моє рішення, але поки так
-    public static void div(double a, double b) {
-        if (b == 0) {
-            System.err.println("!/0");
-        } else {
-            System.out.println(a / b);
+    public static double div(double a, double b) throws ArithmeticException{
+        if(b == 0){
+            throw new ArithmeticException("!/0");
         }
+        return a / b;
     }
     //метод для визначення чи знаходиться число у вказаному діапазоні
-    public static void readNumber(int start, int end, BufferedReader bufferedReader) throws IOException, OutOfIntRange {
+    public static int readNumber(int start, int end, BufferedReader bufferedReader) throws IOException, OutOfIntRange {
         int value = Integer.parseInt(bufferedReader.readLine());
+        //Цей if для того, щоб програма працювала коректно, незалежно від значення start i end
         if (start > end) {
             int temp = start;
             start = end;
             end = temp;
         }
-        if (start <= value && value <= end) {
-            System.out.println("Congratulations! Your answer " + value + " is in the range!");
+        if (start < value && value < end) {
+            return value;
         } else {
+            //Написав свій
             throw new OutOfIntRange("Bad day(");
         }
     }
