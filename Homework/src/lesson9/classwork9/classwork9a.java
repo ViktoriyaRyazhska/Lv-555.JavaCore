@@ -19,14 +19,14 @@ public class classwork9a {
 
         try {
             calcRectangleArea(a, b);
-        } catch (Exception e) {
-            System.out.println("You've entered negative value.");
+        } catch (InvalidRectangleException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void calcRectangleArea(int a, int b) throws Exception {
-        if (a < 0 || b < 0) {
-            throw new Exception();
+    public static void calcRectangleArea(int a, int b) throws InvalidRectangleException {
+        if (a <= 0 || b <= 0) {
+            throw new InvalidRectangleException("Rectangle's side must be greater than zero.");
         }
         System.out.println(a * b);
     }
