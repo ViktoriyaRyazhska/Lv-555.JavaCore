@@ -1,0 +1,28 @@
+package com.company;
+import java.io.*;
+
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) throws InterruptedException{
+        List<String> list = new ArrayList<>();
+        File fr = new File("D:\\SoftServer\\HomeWork 6\\untitled35\\src\\com\\company\\mytext.txt");
+        FileOutputStream outputStream;
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            fileReader = new FileReader(fr);
+            bufferedReader = new BufferedReader(fileReader);
+            String a = null;
+            int count = 0;
+            while ((a = bufferedReader.readLine()) != null) {
+                list.add(a);
+            }
+            bufferedReader.close();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(list);
+
+    }
+}

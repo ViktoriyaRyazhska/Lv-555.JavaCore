@@ -1,0 +1,12 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("12345676");
+            Thread.sleep(1000);
+        }
+
+    }
+}

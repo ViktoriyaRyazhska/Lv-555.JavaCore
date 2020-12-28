@@ -1,0 +1,77 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Введіть 10 чисел");
+        Scanner sc = new Scanner(System.in);
+
+
+        int x1 = sc.nextInt();
+        int x2 = sc.nextInt();
+        int x3 = sc.nextInt();
+        int x4 = sc.nextInt();
+        int x5 = sc.nextInt();
+        int x6 = sc.nextInt();
+        int x7 = sc.nextInt();
+        int x8 = sc.nextInt();
+        int x9 = sc.nextInt();
+        int x10 = sc.nextInt();
+
+
+        int[] arr = {x1, x2, x3, x4, x5, x6, x7, x8, x9, x10};
+
+
+        int sum1 = 0;
+
+        int dob1 = 1;
+
+
+
+
+            for (int i = 0; i < 5; i++) {
+                sum1 += arr[i];
+            }
+
+            System.out.println((x1 > 0 && x2 > 0 && x3 > 0 && x4 > 0 && x5 > 0) + " Sum = " + sum1);
+
+
+
+                for (int i = 5; i < 10; i++) {
+                    {
+                        dob1 = dob1 * arr[i];
+                    }
+                }
+                System.out.println("dob1 = " + dob1);
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
