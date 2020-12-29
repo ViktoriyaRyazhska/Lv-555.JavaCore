@@ -1,0 +1,17 @@
+package com.company;
+
+public class ContractEmployee extends Employee {
+
+        final String employeeld = "Second child";
+        final String federalTaxIdmember   = "federalTaxIdmember 5";
+
+
+
+
+        @Override
+        public void calculatePay() {
+            System.out.println("Roman  = " + employeeld);
+            System.out.println(federalTaxIdmember);
+        }
+    }
+

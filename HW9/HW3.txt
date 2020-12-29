@@ -1,0 +1,50 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+	    Thread1 t1 = new Thread1();
+        Thread2 t2 = new Thread2();
+        Thread3 t3 = new Thread3();
+        t1.start();
+        t2.start();
+        t3.start();
+
+    }
+}
+
+
+package com.company;
+
+public class Thread1 extends Thread {
+    public void run() {
+        for(int i = 1; i < 2; i++) {
+            System.out.println("Thread1");
+        }
+        System.out.println("Exit Thread1");
+    }
+}
+
+
+package com.company;
+
+public class Thread2 extends Thread {
+    public void run() {
+        for(int i = 1; i < 2; i++) {
+            System.out.println("Thread2");
+        }
+        System.out.println("Exit Thread2");
+    }
+}
+
+
+package com.company;
+
+public class Thread3 extends Thread {
+    public void run() {
+        for(int i = 1; i < 6; i++) {
+            System.out.println("Thread3");
+        }
+        System.out.println("Exit Thread3");
+    }
+}

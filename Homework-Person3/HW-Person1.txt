@@ -1,0 +1,92 @@
+package com.company;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Main {
+
+    static Main[] men;
+
+    static {
+        men = new Main[2];
+    }
+
+    private String firstName;
+    private String lastName;
+    private int birthday;
+
+
+    public String getfirstName() {
+        return this.firstName;
+    }
+
+    public void setfirstName(String name) {
+        this.firstName = this.firstName;
+    }
+
+    public String getlastName() {
+        return this.lastName;
+    }
+
+    public void setlastName(String name) {
+        this.lastName = this.lastName;
+    }
+
+    public int getBirthday() {
+        return this.birthday;
+    }
+
+    public void setBirthday(int birthday) {
+        this.birthday = birthday;
+    }
+
+    int getAge(int birthday) {
+        int year = LocalDate.now().getYear() - birthday;
+        return year;
+    }
+
+    void input(int a) {
+        Scanner p = new Scanner(System.in);
+        System.out.println(a + " Ведіть своє ім'я");
+        men[a].firstName = p.nextLine();
+        System.out.println(a + " Ведіть своє прізвище");
+        men[a].lastName = p.nextLine();
+        System.out.println(a + " Ведіть свій рік народження");
+        men[a].birthday = p.nextInt();
+    }
+
+    void output(int a) {
+
+        System.out.println(men[a].firstName);
+        System.out.println(men[a].lastName);
+        System.out.println("Вік: " + getAge(men[a].birthday));
+    }
+
+    void name(String fn, String ln) {
+        this.firstName = fn;
+        this.lastName = ln;
+    }
+
+
+    public static void main(String[] args) {
+
+        int a = 1;
+        while (a <= 1) {
+            men[a] = new Main();
+            men[a].input(a);
+            a++;
+        }
+        a = 1;
+        while (a <= 1) {
+            men[a].output(a);
+            a++;
+        }
+    }
+}
+
+
+
+
+
+
+

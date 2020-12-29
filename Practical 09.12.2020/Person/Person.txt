@@ -1,0 +1,10 @@
+package com.company;
+
+public class Person {
+
+    public void salary() {
+    }
+
+    public void print() {
+    }
+}

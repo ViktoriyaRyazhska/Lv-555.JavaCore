@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Example {
+
+
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        /*   Програма №1
+
+        System.out.println("Ведіть число а: ");
+        int a = in.nextInt();
+        System.out.println("Ведіть число b: ");
+        int b = in.nextInt();
+        int sum = a + b;
+        int riz = a - b;
+        int mz = a * b;
+        int dil = a / b;
+
+
+        System.out.println("Сума a + b = " + sum);
+        System.out.println("Різниця a - b = " + riz);
+        System.out.println("Множення a * b = " + mz);
+        System.out.println("Ділення a / b = " + dil);
+
+
+         */
+
+
+
+        // Програма №2
+
+        System.out.println("How are you?");
+
+        System.out.println("You are " + in.nextLine());
+
+    }
+}

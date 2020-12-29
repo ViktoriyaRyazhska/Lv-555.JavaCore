@@ -1,0 +1,24 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        String s = "I like the Volkswagen car";
+        String[] text = s.split(" ");
+        String x = " ";
+        StringBuilder a = new StringBuilder(text[1]);
+
+        for( int i = 0; i < text.length; i++) {
+            if (text[i].length() >= x.length()) {
+                x = text[i];
+            }
+
+        }
+
+        System.out.println("Найдовше слово - " + x);
+        System.out.println("Кількість символів - " + x.length());
+        System.out.println("Друге слово у зворотньому порядку - " + a.reverse());
+
+    }
+}

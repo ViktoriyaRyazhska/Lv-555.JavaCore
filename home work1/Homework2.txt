@@ -1,0 +1,22 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	    Scanner in = new Scanner(System.in);
+	    System.out.println("Як тебе звати? ");
+	    String N = in.nextLine();
+
+	    System.out.println("Скільки тобі років? ");
+	    String Y = in.nextLine();
+
+	    System.out.println("З якого ти міста? ");
+	    String H = in.nextLine();
+
+	    System.out.println("Вас звати " + N);
+	    System.out.println("Вам років " + Y);
+	    System.out.println("Ви з міста " + H);
+    }
+}

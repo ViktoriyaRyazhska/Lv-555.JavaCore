@@ -1,0 +1,13 @@
+package com.company;
+
+public class Dog implements Animals {
+    @Override
+    public void voice() {
+        System.out.println("Вік собаки = 1 роки");
+    }
+
+    @Override
+    public void feed() {
+        System.out.println("Колір собаки: чорний");
+    }
+}
