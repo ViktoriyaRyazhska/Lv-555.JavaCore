@@ -2,7 +2,7 @@ Winter, winter.
 Let’s go skate.
 Winter, winter.
 Don’t be late.
-Winter, winter. var
+Winter, winter. var some text added
 Let’s go roll.
 Winter, winter.
 In the snow.
