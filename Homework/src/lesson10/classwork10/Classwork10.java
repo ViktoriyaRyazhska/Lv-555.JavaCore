@@ -20,7 +20,7 @@ public class Classwork10 {
         t2.start();
         t1.join();
         t2.join();
-        System.out.println("My name is Maya");
+        System.out.println("My name is Maya");  
 
         //Task3
         ArrayList<String> list = new ArrayList<>();
@@ -47,17 +47,16 @@ public class Classwork10 {
         }
 
         //find the longest and the shortest line(string).
-        int i = 0;
-        int length = 0;
+
         String min = list.get(0);
         String max = list.get(0);
         for (String s: list) {
-            length = s.length();
-            if(length > max.length()){
+
+            if(s.length() > max.length()){
                 max = s;
             }
 
-            if(length < min.length()){
+            if(s.length() < min.length()){
                 min = s;
             }
         }
