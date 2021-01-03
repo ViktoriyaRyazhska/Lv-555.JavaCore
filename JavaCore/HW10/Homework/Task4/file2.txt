@@ -1,0 +1,3 @@
+[My name is Andrew, My birthday is 22.12.99]
+Longest line: If you want to know my name, it is written in another file
+Number of lines in file1.txt: 5
