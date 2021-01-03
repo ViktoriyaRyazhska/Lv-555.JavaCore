@@ -1,0 +1,33 @@
+package com.company;
+
+import java.lang.reflect.Array;
+import java.time.DayOfWeek;
+import java.time.LocalDateTime;
+import java.time.temporal.TemporalAdjusters;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        Random random = new Random();
+        //random.ints().limit(10).forEach(System.out::println);
+       // random.ints().limit(10).sorted().forEach(System.out::println);
+        IntSummaryStatistics max = random.ints(1,20).limit(10). summaryStatistics();
+        System.out.println("MAX   " + max.getMax());
+
+        LocalDateTime x = LocalDateTime.now();
+        System.out.println(x.getDayOfWeek());
+
+        LocalDateTime y = x.with(TemporalAdjusters.dayOfWeekInMonth(1, DayOfWeek.MONDAY));
+        System.out.println(y);
+
+        List<String> strs1 = Arrays.asList("Roman", "Volodimir", "Mariya", "Yaroslav");
+        List<String> strs2 = strs1.stream().sorted().collect(Collectors.toList());
+        System.out.println(strs2);
+
+
+    }
+}

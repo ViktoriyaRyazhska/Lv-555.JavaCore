@@ -1,0 +1,5 @@
+package com.company;
+
+public abstract class Notfly extends Bird {
+    public abstract void notfly();
+}

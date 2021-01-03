@@ -1,0 +1,11 @@
+package com.company;
+
+public class Swallow extends Fly {
+    final String TYPE_BIRD = "Ластівка";
+
+    @Override
+    public void fly() {
+
+        System.out.println(TYPE_BIRD + " Вміє літати");
+    }
+}

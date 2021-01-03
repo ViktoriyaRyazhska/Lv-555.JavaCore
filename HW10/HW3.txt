@@ -1,0 +1,31 @@
+package com.company;
+
+
+import java.text.SimpleDateFormat;
+
+public class Main {
+
+	private static final SimpleDateFormat form = new SimpleDateFormat("mm.dd.yy") {
+		{
+			setLenient(false);
+		}
+	};
+
+	public static void main(String[] args) {
+
+		System.out.println(isValidDate("30.12.20"));
+		System.out.println(isValidDate("29.2020.16"));
+	}
+
+	public static boolean isValidDate(String date) {
+
+		try {
+
+			form.parse(date);
+			return true;
+
+		} catch (Exception e) {}
+
+		return false;
+	}
+}

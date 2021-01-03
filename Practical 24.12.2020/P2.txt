@@ -1,0 +1,41 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) throws InterruptedException {
+	    Thread t1 = new MyThread("Roman", 1000);
+        Thread t2 = new MyThread("Hera", 1500);
+        t1.start();
+        t2.start();
+        t1.join();
+        t2.join();
+        System.out.println("Vovk Roman");
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+package com.company;
+
+public class MyThread extends Thread {
+    private String name;
+    private int pause;
+    public MyThread(String name, int pause) {
+        this.name = name;
+        this.pause = pause;
+    }
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            try {
+                sleep(pause);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(name);
+        }
+    }
+}
+
+

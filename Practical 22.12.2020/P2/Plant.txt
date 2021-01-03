@@ -1,0 +1,41 @@
+package com.company;
+
+public class Plant {
+    private Type type;
+    private Color color;
+    private int z;
+
+    public Plant(String type, String color, int z) throws ColorException, TypeException {
+        Color x = colorStrToEnum(color);
+        Type y = typeStrToEnum(type);
+        this.z = z;
+        this.type = y;
+        this.color = x;
+    }
+
+    private Color colorStrToEnum(String color) throws ColorException {
+        switch (color.toLowerCase()) {
+            case "blue":
+                return Color.Blue;
+            case "red":
+                return Color.Red;
+            case "white":
+                return Color.White;
+            default:
+                throw new ColorException("Error");
+        }
+    }
+
+    private Type typeStrToEnum(String type) throws ColorException {
+        switch (type.toLowerCase()) {
+            case "herbs":
+                return Type.Herbs;
+            case "ferns":
+                return Type.Ferns;
+            case "cactus":
+                return Type.Cactus;
+            default:
+                throw new ColorException("Error 606");
+        }
+    }
+}
