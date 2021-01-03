@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #FF9900;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutY="86.0" prefHeight="314.0" prefWidth="700.0" style="-fx-background-color: #000080;">
+         <children>
+            <Button fx:id="Wat" layoutX="17.0" layoutY="22.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="665.0" text="I * U = W   (Формала вимірювання потужності.  I - електричний струм. Одиниця вимірювання Ампер (А). U - прикладена електриччна напруга. Одиниця вимірювання Вольт (В).  W - електричного струму. Одиниця вимірювання Ват (Вт).)" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Volt" layoutX="17.0" layoutY="121.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="665.0" text="U = I * R  (Формула вимірювання прикладеної  електричної напруги. U - прикладена електрична напруга. Одиниця вимірювання Вольт (В). I - електричний струм. Одиниця вимірювання Ампер (А). R - електричний опір. Одиниця вимірювання Ом. (Ом).)" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Om" layoutX="17.0" layoutY="217.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="665.0" text="R = U / I  (Формула вимірювання електричного опору.  R - електричний опір. Одиниця вимірювання Ом (Ом). U - прикладена електрична напруга. Одиниця вимірювання Вольт (В). I - електричний струм. Одиниця вимірювання Ампер (А).)" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="2.0" layoutY="4.0" prefHeight="85.0" prefWidth="693.0" text="Зако́н О́ма — це твердження про пропорційність сили струму в провіднику прикладеній напрузі, справедливе для металів і напівпровідників при не надто великих прикладених напругах. Якщо для елемента електричного кола справедливий закон Ома, то цей елемент має лінійну вольт-амперну характеристику." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

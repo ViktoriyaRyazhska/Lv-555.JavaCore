@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Opir">
+    <children>
+        <AnchorPane layoutY="-1.0" prefHeight="144.0" prefWidth="600.0" style="-fx-background-color: #AAAAAA;">
+            <children>
+                <Text layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вимірювання опору" textAlignment="CENTER" wrappingWidth="600.0">
+                    <font>
+                        <Font name="System Italic" size="47.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="143.0" prefHeight="257.0" prefWidth="600.0" style="-fx-background-color: #00FFFF;">
+            <children>
+                <TextField fx:id="txtamper" layoutX="224.0" layoutY="81.0" prefHeight="119.0" prefWidth="140.0" promptText="I (A)">
+                    <font>
+                        <Font size="40.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txtvolt" layoutX="31.0" layoutY="81.0" prefHeight="119.0" prefWidth="148.0" promptText="U (V)">
+                    <font>
+                        <Font size="35.0" />
+                    </font>
+                </TextField>
+                <Text layoutX="187.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                    <font>
+                        <Font size="53.0" />
+                    </font>
+                </Text>
+                <Text layoutX="220.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введіть струм (А)">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <Text layoutX="31.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введіть напругу (V)">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <Text layoutX="433.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результат опору (Om)" textAlignment="CENTER" wrappingWidth="165.359375">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btnresult" layoutX="378.0" layoutY="128.0" mnemonicParsing="false" onAction="#Add" text="Result" />
+                <TextField fx:id="txtopir" layoutX="446.0" layoutY="81.0" prefHeight="119.0" prefWidth="140.0" promptText="R (Om)">
+                    <font>
+                        <Font size="33.0" />
+                    </font>
+                </TextField>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

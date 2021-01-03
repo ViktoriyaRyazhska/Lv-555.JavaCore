@@ -1,0 +1,45 @@
+package sample;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+public class Volt {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private TextField txtamper;
+
+    @FXML
+    private TextField txtopir;
+
+    @FXML
+    private Button btnresult;
+
+    @FXML
+    private TextField txtvolt;
+
+    @FXML
+    void Add(ActionEvent event) {
+        int amper, volt, opir;
+        amper = Integer.parseInt(txtamper.getText());
+        opir = Integer.parseInt(txtopir.getText());
+        volt = amper * opir;
+        txtvolt.setText(String.valueOf(volt));
+
+    }
+
+    @FXML
+    void initialize() {
+
+
+    }
+}
