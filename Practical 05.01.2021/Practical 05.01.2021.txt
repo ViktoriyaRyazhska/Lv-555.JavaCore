@@ -1,0 +1,34 @@
+package com.company;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int countCharacters = 0;
+        String testWord = "";
+        String character = "";
+        String character1 = "";
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Input word");
+        try {
+            testWord = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Input character");
+        try {
+            character1 = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < testWord.length(); i++) {
+            character = testWord.substring(i, i+1);
+            if (character1.equals(character)) countCharacters++;
+        }
+        System.out.println("There are character" + character + " " + countCharacters + " times in the word " + testWord);
+
+    }
+}
