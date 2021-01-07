@@ -11,5 +11,5 @@ N|Name| HW1 | HW2. Classes|HW3. If...|HW4. Loops|HW5. OOP| HW6. Collection | HW7
 7|beemaya13|+ | +|+|+|+|+|+|+|+|+
 8|OlegStashkiv|+ |+|+|+|+|+||||
 9|AndrewKbrn|+|+|+|+|+|+|+|+|+||
-10|Amelianovych|+|+|+|+|+|+|+|.|.|
+10|Amelianovych|+|+|+|+|+|+|+|+|+|
 11|Bodyash7|+|+|.|+||+|+|+||
