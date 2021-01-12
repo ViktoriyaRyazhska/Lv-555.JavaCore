@@ -1,0 +1,5 @@
+Hey.
+If you want to know my name, it is written in another file
+I`m learning Java.
+Unfortunately, I'm without a career yet.
+some text some text some text.
