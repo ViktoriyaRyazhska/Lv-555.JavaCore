@@ -1,5 +1,5 @@
-public class Task2 {
-    public static void execute(){
+public class Task5 {
+    public void execute(){
         System.out.println(isPalindrome("Bhиhb"));
     }
     public static boolean isPalindrome(String n){

@@ -8,8 +8,8 @@ public class Main {
 		int num = sc.nextInt();
 		switch (num) {
 		case 1:
-//			Task1 t1 = new Task1();
-//			t1.execute();
+			Task1 t1 = new Task1();
+			t1.execute();
 			break;
 		case 2:
 			Task2 t2 = new Task2();
@@ -24,8 +24,8 @@ public class Main {
 //			t4.execute();
 			break;
 		case 5:
-//			Task5 t5 = new Task5();
-//			t5.execute();
+			Task5 t5 = new Task5();
+			t5.execute();
 			break;
 		case 6:
 			Task6 t6 = new Task6();
@@ -40,8 +40,8 @@ public class Main {
 //			t8.execute();
 			break;
 		case 9:
-//			Task9 t9 = new Task9();
-//			t9.execute();
+			Task9 t9 = new Task9();
+			t9.execute();
 			break;
 		case 10:
 			Task10 t10 = new Task10();
