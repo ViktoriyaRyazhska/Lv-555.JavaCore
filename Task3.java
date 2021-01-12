@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task3 {
-    public void task7 () throws IOException {
+    public void execute () throws IOException {
         double dollar;
         double hryvna;
         double sum;

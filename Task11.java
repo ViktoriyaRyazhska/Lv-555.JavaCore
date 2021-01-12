@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Task11 {
-    public void task11() throws IOException {
+    public void execute() throws IOException {
         System.out.println("Please enter a credit card #");
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String card = bf.readLine();

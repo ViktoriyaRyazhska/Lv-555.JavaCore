@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task7 {
-    public void task7 () throws IOException {
+    public void execute () throws IOException {
         int fact = 1, num, count;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter a number for !:");
