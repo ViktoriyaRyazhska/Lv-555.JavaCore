@@ -1,0 +1,5 @@
+# Idea Projects settings and compiled classes
+.idea/
+.out/
+.lib/
+*.iml
