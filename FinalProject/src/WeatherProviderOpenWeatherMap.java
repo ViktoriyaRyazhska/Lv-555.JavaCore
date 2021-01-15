@@ -4,15 +4,43 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-//TODO add documentation
-
+/**
+ * Extends Weatherprovider class providing implementation specific for Open Weather Map cloud weather provider
+ */
 public class WeatherProviderOpenWeatherMap extends WeatherProvider {
+    /**
+     * Provider name
+     */
     private static final String PROVIDER_NAME = "\"Open Weather Map\"";
+
+    /**
+     * Provider WEB API URL
+     */
     private static final String API_URL = "http://api.openweathermap.org/data/2.5/weather";
+
+    /**
+     * HTTP GET parameter name to specify the user application key used to access provider API
+     */
     private static final String API_KEY_NAME = "appid";
+
+    /**
+     * API key value
+     */
     private static final String API_KEY_VALUE = "f449bcc1a6db1b3bb2d02470295129b1";
+
+    /**
+     * HTTP GET parameter to specify city
+     */
     private static final String CITY_KEY_NAME = "q";
+
+    /**
+     * HTTP GET parameter to specify measurement system
+     */
     private static final String UNITS_KEY_NAME = "units";
+
+    /**
+     * Measurement system
+     */
     private static final String UNITS_KEY_VALUE = "metric";
 
     @Override

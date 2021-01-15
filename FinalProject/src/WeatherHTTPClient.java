@@ -101,14 +101,14 @@ public class WeatherHTTPClient {
     }
 
     /**
-     * Helper class used to add HTTP request parameters in form '?param1=val1&param2=val2...' to the server URL
+     * Helper class used to add HTTP request parameters in form '?param1=val1{@literal &}param2=val2...' to the server URL
      */
     private static class ParameterStringBuilder {
         /**
          * Returns param string built from the given list of parameters
          *
          * @param params list of parameters
-         * @return String of parameters in form '?param1=val1&param2=val2...'
+         * @return String of parameters in form '?param1=val1{@literal &}param2=val2...'
          * @throws UnsupportedEncodingException in case any parameter cannot be encoded to UTF-8
          */
         public static String getParamsString(Map<String, String> params)
@@ -137,6 +137,11 @@ public class WeatherHTTPClient {
      */
     static class WeatherHTTPClientException extends Exception {
 
+        /**
+         * Constructor. Creates an exception instance
+         *
+         * @param s Error message
+         */
         public WeatherHTTPClientException(String s) {
             super(s);
         }

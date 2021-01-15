@@ -6,9 +6,25 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * The application calculates accurate temperature value for given city as follows:
+ * <ul>
+ * <li>Requests the user to provide city name</li>
+ * <li>For the given city, requests current weather conditions from two different cloud weather providers
+ * (in separate threads) through WEB API</li>
+ * <li>Calculates and outputs the median value of the current temperature in the given location in degrees, Celsius</li>
+ * </ul>
+ */
 public class Application {
+    /**
+     * Default city name.
+     */
     private static final String DEFAULT_LOCATION = "Kharkiv";
 
+    /**
+     * Application main() method
+     * @param args Arguments passed to the application (not used)
+     */
     public static void main(String[] args) {
 
         String location = DEFAULT_LOCATION;

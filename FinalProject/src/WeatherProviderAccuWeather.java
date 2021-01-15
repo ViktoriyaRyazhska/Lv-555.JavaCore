@@ -5,12 +5,38 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Extends Weatherprovider class providing implementation specific for Accu Weather Map cloud weather provider
+ */
 public class WeatherProviderAccuWeather extends WeatherProvider {
+    /**
+     * Provider name
+     */
     private static final String PROVIDER_NAME = "\"AccuWeather\"";
+
+    /**
+     * Weather provider WEB API URL to get location ID for a city
+     */
     private static final String LOCATION_API_URL = "http://dataservice.accuweather.com/locations/v1/cities/search";
+
+    /**
+     * Provider WEB API URL to get current weather conditions for given location ID
+     */
     private static final String WEATHER_API_URL = "http://dataservice.accuweather.com/currentconditions/v1/";
+
+    /**
+     * HTTP GET parameter name to specify the user application key used to access provider API
+     */
     private static final String API_KEY_NAME = "apikey";
+
+    /**
+     * API key value
+     */
     private static final String API_KEY_VALUE = "JmwOQR7OZaRYABfIhPFyyqPdv9qL4jFv";
+
+    /**
+     * HTTP GET parameter to specify city
+     */
     private static final String CITY_KEY_NAME = "q";
 
     @Override
