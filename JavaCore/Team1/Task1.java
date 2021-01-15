@@ -2,7 +2,7 @@ package com.company;
 
 public class Tack1 {
 
-    public static void main(String[] args) {
+    public static void tack1(  ) {
 	    int a = 1;
 	    int b = 1;
 	    int c;
