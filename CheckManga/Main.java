@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
  
 public class Main implements ActionListener {
  
@@ -20,7 +21,7 @@ public class Main implements ActionListener {
       viewForm = new JFrame("Проверка наличия новых глав");
       viewForm.setSize(235, 170);
       viewForm.setVisible(true);
-      viewForm.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+      viewForm.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
  
       JButton button1 = new JButton("Проверить");
       button1.setVisible(true);
@@ -50,7 +51,7 @@ public class Main implements ActionListener {
          public void actionPerformed(ActionEvent e) {
         	WriteSettings.writeSettings();
 			JOptionPane.showMessageDialog(viewForm, "Настройки перезаписаны",
-				      "Инфо", JOptionPane.WARNING_MESSAGE);
+				      "Перезапись", JOptionPane.WARNING_MESSAGE);
          }
  
       });
